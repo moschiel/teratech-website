@@ -1,0 +1,74 @@
+.navigation {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 2px solid red;
+  height: 100%;
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .navigation nav.desk-menu {
+    display: none;
+  }
+}
+.navigation nav.desk-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+.navigation nav.desk-menu ul li {
+  margin: auto 18px;
+}
+.navigation nav.desk-menu ul li a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.navigation nav.desk-menu ul li a:hover {
+  color: #703b9b;
+}
+.navigation nav.mobile-menu {
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: 75px;
+  width: 100%;
+}
+.navigation nav.mobile-menu ul li {
+  background-color: #281537;
+  text-align: center;
+  padding: 15px 0;
+}
+.navigation nav.mobile-menu ul li a {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+  display: block;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+}
+.navigation nav.mobile-menu ul li:hover {
+  background-color: #703b9b;
+}
+.navigation img.menu {
+  display: none;
+}
+@media (max-width: 768px) {
+  .navigation img.menu {
+    display: block;
+    cursor: pointer;
+  }
+}

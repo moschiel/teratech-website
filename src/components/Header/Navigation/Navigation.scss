@@ -1,0 +1,66 @@
+@import "../../PartialStyles/responsive-breakpoints";
+
+.navigation {
+    width: fit-content;
+    border: 2px solid red;
+    height: 100%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    nav.desk-menu {
+        @include for-tablet-portrait {
+            display: none;
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            li {
+                margin: auto 18px;
+                a {
+                    text-transform: capitalize;
+                    text-decoration: none;
+                    color: white;
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                }
+                a:hover {
+                    color: #703b9b;
+                }
+            }
+        }
+    }
+    nav.mobile-menu {
+        display: none;
+        position: absolute;
+        left: 0px;
+        top: 75px;
+        width: 100%;
+        ul {
+            li {
+                background-color: #281537;
+                text-align: center;
+                padding: 15px 0;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    width: 100%;
+                    cursor: pointer;
+                    display: block;
+                    text-transform: capitalize;
+                    font-size: 1.2rem;
+                }
+            }
+            li:hover{
+                background-color: #703b9b;
+            }
+        }
+    }
+    img.menu {
+        display: none;
+        @include for-tablet-portrait {
+            display: block;
+            cursor: pointer;
+        }
+    }
+}

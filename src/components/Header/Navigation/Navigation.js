@@ -1,5 +1,7 @@
 import React from 'react'; 
 
+import menuIcon from './menu.png';
+
 import "./Navigation.css";
 
 function Navigation () {
@@ -14,7 +16,7 @@ function Navigation () {
             </ul>
             </nav>
     
-            <img class="menu" src="images/menu.png" alt="menu" />
+            <img class="menu" src={menuIcon} alt="menu" />
             
             <nav class="mobile-menu">
             <ul>

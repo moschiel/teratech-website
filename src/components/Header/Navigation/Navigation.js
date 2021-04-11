@@ -20,10 +20,10 @@ function Navigation () {
         <div className="navigation"  onMouseLeave={handleNavOnMouseLeave}>
             <nav class="desk-menu">
                 <ul>
-                    <li><a href="index.html">home</a></li>
+                    <li><a href="/">home</a></li>
                     <li class="autoscroll"><a href="#service">serviços</a></li>
-                    <li><a href="./criacao-de-sites.html">WebSite</a></li>
-                    <li><a href="./criacao-de-robos.html">Robotize</a></li>
+                    <li><a href="/criacao-de-sites">WebSite</a></li>
+                    <li><a href="/criacao-de-robos">Robotize</a></li>
                 </ul>
             </nav>
     
@@ -37,10 +37,10 @@ function Navigation () {
             
             <nav class="mobile-menu" >
                 <ul>
-                    <li><a href="#home">home</a></li>
+                    <li><a href="/">home</a></li>
                     <li class="autoscroll"><a href="#service">serviços</a></li>
-                    <li><a href="./criacao-de-sites.html">WebSite</a></li>
-                    <li><a href="./criacao-de-robos.html">Robotize</a></li>
+                    <li><a href="/criacao-de-sites">WebSite</a></li>
+                    <li><a href="/criacao-de-robos">Robotize</a></li>
                 </ul>
             </nav>
         </div>

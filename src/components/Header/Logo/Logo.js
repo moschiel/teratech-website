@@ -11,7 +11,7 @@ import './Logo.css';
 function Logo() {
     return (
         <div className="logo" >
-            <a href="./index.html">
+            <a href="/">
                 <img src={logoSVG} alt="logo" />
             </a>
         </div>

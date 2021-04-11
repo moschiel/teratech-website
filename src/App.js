@@ -1,14 +1,13 @@
-// import style
-import './App.css';
+//para navegação entre rotas
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './routes/Routes';
 
-// import components
-import Header from './components/Header/Header';
 
 function App() {
   return (
-    <div className="App">
-      <Header />  
-    </div>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
   );
 }
 

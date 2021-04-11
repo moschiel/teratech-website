@@ -56,7 +56,7 @@ function BannerServices(props) {
             className="banner banner-services" 
             style={{ backgroundImage: `url(${bannerImg})`}} 
         >
-            <div className="head-text center">
+            <div className="banner-service-text center">
                 {htmlContent}
             </div>
         </div>

@@ -2,7 +2,6 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  border: 2px solid red;
   height: 100%;
   padding: 0 10px;
   display: -webkit-box;
@@ -47,9 +46,10 @@
   width: 100%;
 }
 .navigation nav.mobile-menu ul li {
-  background-color: #281537;
-  text-align: center;
+  height: 60px;
   padding: 15px 0;
+  text-align: center;
+  background-color: #281537;
 }
 .navigation nav.mobile-menu ul li a {
   text-decoration: none;

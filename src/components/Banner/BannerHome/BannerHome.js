@@ -11,7 +11,7 @@ function BannerHome() {
     });
 
     return (
-        <div className="banner banner-home" >
+        <div className="banner-home" >
             <div className="animate-container center">
                 <h1 id="animate-text-1">LINHA 1</h1>
                 <h1 id="animate-text-2">LINHA 2</h1>

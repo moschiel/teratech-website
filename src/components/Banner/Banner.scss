@@ -2,7 +2,7 @@
 
 $headerBackgroundColor: #281537;
 
-.banner {
+@mixin banner {
     width: 100%;
     height: calc(100vh - 75px); //altura do header é 75px 
     margin-top: 74px; //altura do header é 75px
@@ -12,6 +12,7 @@ $headerBackgroundColor: #281537;
 }
 
 .banner-home{
+    @include banner;
     background-color: $headerBackgroundColor;
     .animate-container {
         height: 90%;
@@ -28,6 +29,7 @@ $headerBackgroundColor: #281537;
 }
 
 .banner-services {
+    @include banner;
     background-position: center;
     background-repeat: no-repeat;   
     background-size: cover;

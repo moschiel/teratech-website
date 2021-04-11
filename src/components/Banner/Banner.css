@@ -1,16 +1,13 @@
-.banner {
+.banner-home {
   width: 100%;
   height: calc(100vh - 75px);
   margin-top: 74px;
+  background-color: #281537;
 }
 @media (max-width: 576px) {
-  .banner {
+  .banner-home {
     min-height: 550px;
   }
-}
-
-.banner-home {
-  background-color: #281537;
 }
 .banner-home .animate-container {
   height: 90%;
@@ -31,9 +28,17 @@
 }
 
 .banner-services {
+  width: 100%;
+  height: calc(100vh - 75px);
+  margin-top: 74px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media (max-width: 576px) {
+  .banner-services {
+    min-height: 550px;
+  }
 }
 .banner-services .banner-service-text {
   color: white;

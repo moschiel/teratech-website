@@ -44,7 +44,7 @@ function BannerServices(props) {
 
     return (
         <div 
-            className="banner banner-services" 
+            className="banner-services" 
             style={{ backgroundImage: `url(${bannerImg})`}} 
         >
             <div className="banner-service-text center">

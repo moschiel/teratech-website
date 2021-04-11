@@ -1,4 +1,5 @@
 @import "../../PartialStyles/responsive-breakpoints";
+@import "../../PartialStyles/variables";
 
 .navigation {
     width: fit-content;
@@ -33,14 +34,14 @@
         display: none; //isso é alterado via script ao chamar slideUp
         position: absolute;
         left: 0px;
-        top: 75px;
+        top: $headerHeight;
         width: 100%;
         ul {
             li {
                 height: 60px;
                 padding: 15px 0;
                 text-align: center;
-                background-color: #281537;
+                background-color: $mainThemeColor;
                 a {
                     text-decoration: none;
                     color: white;
@@ -52,7 +53,7 @@
                 }
             }
             li:hover{
-                background-color: #703b9b;
+                background-color: $mainThemeHoverColor;
             }
         }
     }

@@ -1,11 +1,10 @@
 @import "../PartialStyles/responsive-breakpoints";
-
-$headerBackgroundColor: #281537;
+@import "../PartialStyles/variables";
 
 @mixin banner {
     width: 100%;
-    height: calc(100vh - 75px); //altura do header é 75px 
-    margin-top: 74px; //altura do header é 75px
+    height: calc(100vh - $headerHeight);  
+    margin-top: $headerHeight - 1; 
     @include for-phone-portrait {
         min-height: 550px;
     }
@@ -13,7 +12,7 @@ $headerBackgroundColor: #281537;
 
 .banner-home{
     @include banner;
-    background-color: $headerBackgroundColor;
+    background-color: $mainThemeColor;
     .animate-container {
         height: 90%;
         padding: 50px 10px 0px 10px;
@@ -36,7 +35,7 @@ $headerBackgroundColor: #281537;
     .banner-service-text {
         color: white;
         display: flex;
-        height: calc(100% - 75px);
+        height: calc(100% - $headerHeight);
         padding-right: 10px;
         align-items: flex-end;
         justify-content: center;

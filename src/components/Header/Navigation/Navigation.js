@@ -18,27 +18,27 @@ function handleNavOnMouseLeave () {
 function Navigation () {
     return (
         <div className="navigation"  onMouseLeave={handleNavOnMouseLeave}>
-            <nav class="desk-menu">
+            <nav className="desk-menu">
                 <ul>
                     <li><a href="/">home</a></li>
-                    <li class="autoscroll"><a href="#service">serviços</a></li>
+                    <li className="autoscroll"><a href="#service">serviços</a></li>
                     <li><a href="/criacao-de-sites">WebSite</a></li>
                     <li><a href="/criacao-de-robos">Robotize</a></li>
                 </ul>
             </nav>
     
             <img 
-                class="menu" 
+                className="menu" 
                 src={menuIconImg} 
                 alt="menu" 
                 onClick={handleMenuIconClick} 
                 onMouseEnter={handleMenuIconOnMouseEnter}
             />
             
-            <nav class="mobile-menu" >
+            <nav className="mobile-menu" >
                 <ul>
                     <li><a href="/">home</a></li>
-                    <li class="autoscroll"><a href="#service">serviços</a></li>
+                    <li className="autoscroll"><a href="#service">serviços</a></li>
                     <li><a href="/criacao-de-sites">WebSite</a></li>
                     <li><a href="/criacao-de-robos">Robotize</a></li>
                 </ul>

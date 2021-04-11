@@ -4,13 +4,13 @@ import React from 'react';
 import '../../components/BaseStyle/Base.css'
 // import components
 import Header from '../../components/Header/Header';
-
+import Banner from '../../components/Banner/Banner';
 
 function Home() {
     return (
         <div>
             <Header />
-            <h2>Home View</h2>
+            <Banner route="/"/>
         </div>
     );
 }

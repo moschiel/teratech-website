@@ -5,7 +5,7 @@ import HomeView from '../views/Home/Home';
 import RobotsView from '../views/Robots/Robots';
 import WebSiteView from '../views/WebSites/WebSites';
 
-export default () => {
+function Routes () {
     return (
         <Switch>
             <Route exact path="/">
@@ -22,3 +22,5 @@ export default () => {
         </Switch>
     );
 }
+
+export default Routes;

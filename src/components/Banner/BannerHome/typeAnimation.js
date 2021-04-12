@@ -117,5 +117,5 @@ function blinkCursorWriter(){
     }
 }
 
-//inicia a animação
+
 export default typeAnimation;

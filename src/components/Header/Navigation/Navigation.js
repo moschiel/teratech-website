@@ -18,7 +18,7 @@ function handleNavOnMouseLeave () {
 
 //troca o modo do menu, de acordo com o tamanho atual da tela
 function setMenuMode() {
-    if($(window).width() < 768){
+    if($(window).width() <= 768){
         $('#nav-menu').removeClass('desk-menu');
         $('#nav-menu').addClass('mobile-menu');
     }else {

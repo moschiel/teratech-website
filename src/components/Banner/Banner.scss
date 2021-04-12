@@ -3,7 +3,7 @@
 
 @mixin banner {
     width: 100%;
-    height: calc(100vh - $headerHeight);  
+    height: calc(100vh - #{$headerHeight});  
     margin-top: $headerHeight - 1; 
     @include for-phone-portrait {
         min-height: 550px;
@@ -35,7 +35,7 @@
     .banner-service-text {
         color: white;
         display: flex;
-        height: calc(100% - $headerHeight);
+        height: calc(100% - #{$headerHeight});
         padding-right: 10px;
         align-items: flex-end;
         justify-content: center;

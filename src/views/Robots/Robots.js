@@ -11,8 +11,8 @@ function Robots() {
     return (
         <div>
             <Header />
-            <Banner route="/criacao-de-robos"/>
-            <Advantages />
+            <Banner route="/criacao-de-robos" />
+            <Advantages route="/criacao-de-robos" />
         </div>
     );
 }

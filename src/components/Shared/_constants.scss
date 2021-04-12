@@ -1,0 +1,35 @@
+$minPhonePortrait: 0px;
+$maxPhonePortrait: 576px;
+$minTabletPortrait: $maxPhonePortrait;
+$maxTabletPortrait: 768px;
+$minTabletLandscape: $maxTabletPortrait;
+$maxTabletLandscape: 992px; 
+$minDesktop: $maxTabletLandscape;
+$maxDesktop: 1200px;
+$minExtraLargeDesktop: $maxDesktop; 
+
+
+// Very small devices
+@mixin for-phone-portrait {
+    @media (max-width: $maxPhonePortrait) { @content; } 
+}
+// Small devices (landscape phones, tablet portrait 576px ~ 768px)
+@mixin for-tablet-portrait {
+    @media (max-width: $maxTabletPortrait) { @content; }
+}
+// Medium devices (landscape tablets, 769px ~ 992px)
+@mixin for-tablet-landscape {
+    @media (max-width: $maxTabletLandscape) { @content; }
+}
+// Large devices (desktops, 992px ~ 1200px)
+@mixin for-desktop {
+    @media (max-width: $maxDesktop) { @content; }
+}
+
+$bgThemeColor: #ededed;
+$mainThemeColor: #281537;
+$mainThemeHoverColor: #703b9b;
+$buttonColor: #472562;
+$buttonHoverColor: #703b9b;
+$headerHeight: 75px;
+

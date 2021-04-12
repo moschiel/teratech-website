@@ -8,6 +8,7 @@ function BannerHome() {
         window.addEventListener('load', () => {
             typeAnimation();
         });
+        console.log('load');
     });
 
     return (

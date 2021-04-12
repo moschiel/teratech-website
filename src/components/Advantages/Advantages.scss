@@ -1,5 +1,4 @@
-@import "../PartialStyles/responsive-breakpoints";
-@import '../PartialStyles/constants';
+@import '../Shared/constants';
 
 .vantagens {
     padding: 70px 0 100px 0;
@@ -54,31 +53,30 @@
     }
 }
 
-//alteramos classes do slick quando usadas dentro de vantagens
-// .slick-track,
-// .slick-slide,
-// .slick-slide div {
-//     height: 100%;
-// }
-// .slick-dots {
-//     list-style-type: none;
-//     display: flex;
-//     justify-content: center;
-//     button {
-//         font-size: 0;
-//         line-height: 0;
-//         display: block;
-//         width: 18px;
-//         height: 18px;
-//         border-radius: 9px;
-//         padding: 5px;
-//         cursor: pointer;
-//         border: 0;
-//         outline: none;
-//         background-color: #d8d8d8;
-//         margin: 30px 10px 0 10px;
-//     }
-//     .slick-active button {
-//         background-color: #688293;
-//     }
-// }
+.vantagens-react-dots {
+    display: none;
+    @include for-tablet-landscape {
+        display: flex;
+    }
+    .react-multi-carousel-dot{
+        button{
+            font-size: 0;
+            line-height: 0;
+            display: block;
+            width: 18px;
+            height: 18px;
+            border-radius: 9px;
+            padding: 5px;
+            cursor: pointer;
+            border: 0;
+            outline: none;
+            background-color: #d8d8d8;
+            margin: 30px 10px 0 10px;
+        }
+    }
+    .react-multi-carousel-dot--active {
+        button{
+            background-color: #688293;
+        }
+    }    
+}

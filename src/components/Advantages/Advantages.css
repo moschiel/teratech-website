@@ -63,3 +63,31 @@
   color: white;
   fill: white;
 }
+
+.vantagens-react-dots {
+  display: none;
+}
+@media (max-width: 992px) {
+  .vantagens-react-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.vantagens-react-dots .react-multi-carousel-dot button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  padding: 5px;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  background-color: #d8d8d8;
+  margin: 30px 10px 0 10px;
+}
+.vantagens-react-dots .react-multi-carousel-dot--active button {
+  background-color: #688293;
+}

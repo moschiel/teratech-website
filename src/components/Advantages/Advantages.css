@@ -1,0 +1,65 @@
+.vantagens {
+  padding: 70px 0 100px 0;
+}
+.vantagens .vantagens-container > h2 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+.vantagens .vantagens-container .vantagem-boxes {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.vantagens .vantagens-container .vantagem-boxes .vantagem-box {
+  padding: 25px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #ccc;
+  min-height: 320px;
+}
+@media (max-width: 576px) {
+  .vantagens .vantagens-container .vantagem-boxes .vantagem-box {
+    border: none;
+  }
+}
+.vantagens .vantagens-container .vantagem-boxes .vantagem-box svg {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 60px;
+  margin: 0 auto;
+  fill: #703b9b;
+}
+.vantagens .vantagens-container .vantagem-boxes .vantagem-box h2 {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 30px 0;
+}
+.vantagens .vantagens-container .vantagem-boxes .vantagem-box p {
+  color: #494949;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.vantagens .vantagens-container .vantagem-boxes .vantagem-box:hover {
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#703b9b), to(#180d21));
+  background-image: linear-gradient(to top left, #703b9b, #180d21);
+}
+.vantagens .vantagens-container .vantagem-boxes .vantagem-box:hover p,
+.vantagens .vantagens-container .vantagem-boxes .vantagem-box:hover h2,
+.vantagens .vantagens-container .vantagem-boxes .vantagem-box:hover svg {
+  color: white;
+  fill: white;
+}

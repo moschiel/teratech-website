@@ -31,12 +31,16 @@ const htmlServicesText = [
 const htmlImages = [
     (
         <div>
-            <img src={robotServiceImage} title="Hand photo created by jcomp - www.freepik.com"/>
+            <img src={robotServiceImage} 
+            alt="robotServiceImage" 
+            title="Hand photo created by jcomp - www.freepik.com"/>
         </div>
     ),
     (
         <div>
-            <img src={sitesServiceImage} title="Photo by Alvaro Reyes on Unsplash" />
+            <img src={sitesServiceImage} 
+            alt="sitesServiceImage" 
+            title="Photo by Alvaro Reyes on Unsplash" />
         </div>
     )
 ]

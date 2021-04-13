@@ -1,5 +1,4 @@
 .services {
-  border: 2px solid yellow;
   width: 100%;
   background-image: -webkit-gradient(linear, right bottom, left top, from(#703b9b), to(black));
   background-image: linear-gradient(to top left, #703b9b, black);
@@ -76,7 +75,6 @@
   margin-left: 20px;
 }
 .services .service-image-container {
-  border: 2px solid yellow;
   padding: 30px;
   height: 450px;
   width: 600px;

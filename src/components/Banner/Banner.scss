@@ -4,7 +4,7 @@
     width: 100%;
     height: calc(100vh - #{$headerHeight});  
     margin-top: $headerHeight - 1; 
-    @include for-maxphone-portrait {
+    @include for-max-phone-portrait {
         min-height: 550px;
     }
 }
@@ -39,7 +39,7 @@
         align-items: flex-end;
         justify-content: center;
         flex-direction: column;
-        @include for-maxphone-portrait {
+        @include for-max-phone-portrait {
             width: 100%;
             padding: 0 10px;
         }
@@ -48,10 +48,10 @@
             font-weight: 900;
             font-size: clamp(3rem, 4vw, 4rem);
             width: 620px; 
-            @include for-maxtablet-portrait {
+            @include for-max-tablet-portrait {
                 width: 500px;
             }
-            @include for-maxphone-portrait {
+            @include for-max-phone-portrait {
                 text-align: center;
                 width: 100%;
             }
@@ -61,10 +61,10 @@
             text-align: left;
             font-weight: 400;
             font-size: clamp(1.3rem, 2vw, 1.5rem);
-            @include for-maxtablet-portrait {
+            @include for-max-tablet-portrait {
                 width: 500px;
             }
-            @include for-maxphone-portrait {
+            @include for-max-phone-portrait {
                 text-align: center;
                 width: 100%;
             }

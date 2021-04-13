@@ -10,14 +10,12 @@
         }
         .vantagem-boxes {
             margin-top: 40px;
-            display: flex;
-            flex-direction: column;
             .vantagem-box {
                 padding: 25px 20px;
                 display: flex;
                 text-align: center;
                 flex-direction: column;
-                border: 1px solid #ccc;
+                border: $vatangemBorder;
                 min-height: 320px;
                 @include for-phone-portrait {
                     border: none;
@@ -26,7 +24,7 @@
                     height: fit-content;
                     width: 60px;
                     margin: 0 auto;
-                    fill: #703b9b;
+                    fill: $vatangemSvgColor;
                 }
                 h2 {
                     color: black;
@@ -41,42 +39,49 @@
                 }
             }
             .vantagem-box:hover {
-                background-image: linear-gradient(to top left, #703b9b, #180d21);
+                background-image: $vatangemHoverBackground;
                 p,
                 h2,
                 svg {
-                    color: white;
-                    fill: white;
+                    color: $vatangemSvgHoverColor;
+                    fill: $vatangemSvgHoverFill;
                 }
             }
         }
     }
 }
 
-.vantagens-react-dots {
-    display: none;
-    @include for-tablet-landscape {
-        display: flex;
-    }
-    .react-multi-carousel-dot{
-        button{
-            font-size: 0;
-            line-height: 0;
-            display: block;
-            width: 18px;
-            height: 18px;
-            border-radius: 9px;
-            padding: 5px;
-            cursor: pointer;
-            border: 0;
-            outline: none;
-            background-color: #d8d8d8;
-            margin: 30px 10px 0 10px;
+//configuração para posicionamento e estilo do carousel-dot
+.vantagem-custom-dots { 
+    //conforme documentação, para deixar os dots posicionado embaixo do carousel,
+    //é preciso editar o componente pai com position:relative e padding-bottom:x
+    position: relative;     
+    padding-bottom: 30px;   
+    .vantagens-react-dots {
+        display: none;
+        @include for-tablet-landscape {
+            display: flex;
         }
-    }
-    .react-multi-carousel-dot--active {
-        button{
-            background-color: #688293;
+        .react-multi-carousel-dot{
+            button{
+                font-size: 0;
+                line-height: 0;
+                display: block;
+                width: 18px;
+                height: 18px;
+                border-radius: 9px;
+                padding: 5px;
+                cursor: pointer;
+                border: 0;
+                outline: none;
+                background-color: $vantagemDotsCarouselColor;
+                margin: 30px 10px 0 10px;
+            }
         }
-    }    
+        .react-multi-carousel-dot--active {
+            button{
+                background-color: $vantagemDotsCarouselColorActive;
+            }
+        }    
+    }
 }

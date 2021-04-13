@@ -1,11 +1,16 @@
+//phone portrait
 $minPhonePortrait: 0px;
 $maxPhonePortrait: 576px;
+//tablet portrait
 $minTabletPortrait: $maxPhonePortrait;
 $maxTabletPortrait: 768px;
+//tablet landscape
 $minTabletLandscape: $maxTabletPortrait;
 $maxTabletLandscape: 992px; 
+//desktop
 $minDesktop: $maxTabletLandscape;
 $maxDesktop: 1200px;
+//extra large desktop
 $minExtraLargeDesktop: $maxDesktop; 
 
 
@@ -26,10 +31,25 @@ $minExtraLargeDesktop: $maxDesktop;
     @media (max-width: $maxDesktop) { @content; }
 }
 
+//body
 $bgThemeColor: #ededed;
-$mainThemeColor: #281537;
-$mainThemeHoverColor: #703b9b;
+//header
+$headerColor: #281537;
+$menuColor: #281537;
+$menuHoverColor: #703b9b;
+$headerHeight: 75px;
+//banner
+$bannerColor: #281537;
+//button
 $buttonColor: #472562;
 $buttonHoverColor: #703b9b;
-$headerHeight: 75px;
+//vantagem
+$vatangemBorder: none; //1px solid #ccc;
+$vatangemSvgColor: #703b9b;
+$vatangemHoverBackground: linear-gradient(to top left, #703b9b, #180d21);
+$vatangemSvgHoverColor: white;
+$vatangemSvgHoverFill: white;
+$vantagemDotsCarouselColor: #d8d8d8;
+$vantagemDotsCarouselColorActive: #688293;
+
 

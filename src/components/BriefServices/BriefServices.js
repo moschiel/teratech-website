@@ -2,6 +2,7 @@ import React from 'react';
 import './BriefServices.css';
 import robotServiceImage from './images/innovation-edit.jpg';
 import sitesServiceImage from './images/sketch-edit.jpg';
+import { routes } from '../Shared/constants';
 
 const htmlServicesText = [
     (
@@ -53,22 +54,22 @@ function BriefServices() {
                 <div className="brief-container">
                     <div className="brief-text-container">
                         {htmlServicesText[0]}
-                        <a href="/criacao-de-robos">
+                        <a href={routes.criacaoDeRobos}>
                             <button>Saiba mais</button>
                         </a>
                     </div>
-                    <div class="brief-image-container">
+                    <div className="brief-image-container">
                         {htmlImages[0]}
                     </div>
                 </div>
                 <div className="brief-container">
                     <div className="brief-text-container">
                         {htmlServicesText[1]}
-                        <a href="/criacao-de-sites">
+                        <a href={routes.criacaoDeSites}>
                             <button>Saiba mais</button>
                         </a>
                     </div>
-                    <div class="brief-image-container">
+                    <div className="brief-image-container">
                         {htmlImages[1]}
                     </div>
                 </div>

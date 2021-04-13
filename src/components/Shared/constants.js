@@ -21,3 +21,9 @@ export const responsiveBreaks = {
     }
 }
 
+export const routes = {
+    home: "/",
+    criacaoDeRobos: "/criacao-de-robos",
+    criacaoDeSites: "/criacao-de-sites",
+}
+

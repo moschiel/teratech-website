@@ -8,9 +8,10 @@
     align-items: center;
     justify-content: space-between;
     nav.desk-menu {
-        @include for-tablet-portrait {
+        //desaparece de 0px ate tablet-portrait
+        @include for-max-tablet-portrait {
             display: none;
-        }
+        } 
         ul {
             display: flex;
             list-style: none;
@@ -30,7 +31,7 @@
         }
     }
     nav.mobile-menu {
-        display: none; //isso é alterado via script ao chamar slideUp
+        display: none; //alterado via slideToogle() do jquery
         position: absolute;
         left: 0px;
         top: $headerHeight;
@@ -56,11 +57,12 @@
             }
         }
     }
-
-    img.menu {
-        display: none;
-        @include for-tablet-portrait {
-            display: block;
+    .menuIcon {
+        //desaparece apartir de tablet-landscape range
+        @include for-min-tablet-landscape {
+            display: none;
+        } 
+        img {
             cursor: pointer;
         }
     }

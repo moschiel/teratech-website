@@ -1,4 +1,5 @@
 import React from 'react';
+import { routes } from '../../components/Shared/constants';
 
 // import basic style
 import '../../components/BaseStyle/Base.css'
@@ -6,13 +7,15 @@ import '../../components/BaseStyle/Base.css'
 import Header from '../../components/Header/Header';
 import Banner from '../../components/Banner/Banner';
 import Advantages from '../../components/Advantages/Advantages';
+import DescriptionServices from '../../components/DescriptionServices/DescriptionServices';
 
 function Robots() {
     return (
         <div>
             <Header />
-            <Banner route="/criacao-de-robos" />
-            <Advantages route="/criacao-de-robos" />
+            <Banner route={routes.criacaoDeRobos} />
+            <Advantages route={routes.criacaoDeRobos} />
+            <DescriptionServices route={routes.criacaoDeRobos} />
         </div>
     );
 }

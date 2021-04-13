@@ -17,7 +17,7 @@
                 flex-direction: column;
                 border: $vatangemBorder;
                 min-height: 320px;
-                @include for-phone-portrait {
+                @include for-max-phone-portrait {
                     border: none;
                 }
                 svg {
@@ -59,7 +59,7 @@
     padding-bottom: 30px;   
     .vantagens-react-dots {
         display: none;
-        @include for-tablet-landscape {
+        @include for-max-tablet-landscape {
             display: flex;
         }
         .react-multi-carousel-dot{

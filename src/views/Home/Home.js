@@ -1,4 +1,5 @@
 import React from 'react';
+import { routes } from '../../components/Shared/constants';
 
 // import basic style
 import '../../components/BaseStyle/Base.css'
@@ -11,7 +12,7 @@ function Home() {
     return (
         <div>
             <Header />
-            <Banner route="/"/>
+            <Banner route={routes.home}/>
             <BriefServices />
         </div>
     );

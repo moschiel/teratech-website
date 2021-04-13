@@ -1,4 +1,5 @@
 import React from 'react';
+import { routes } from '../../components/Shared/constants';
 
 // import basic style
 import '../../components/BaseStyle/Base.css'
@@ -11,8 +12,8 @@ function Robots() {
     return (
         <div>
             <Header />
-            <Banner route="/criacao-de-robos" />
-            <Advantages route="/criacao-de-robos" />
+            <Banner route={routes.criacaoDeRobos} />
+            <Advantages route={routes.criacaoDeRobos} />
         </div>
     );
 }

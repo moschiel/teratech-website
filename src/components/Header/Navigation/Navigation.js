@@ -1,5 +1,6 @@
 import React from 'react'; 
 import $ from 'jquery';
+import { routes } from '../../Shared/constants';
 import menuIconImg from './menu.png';
 import "./Navigation.css";
 
@@ -51,10 +52,10 @@ function Navigation () {
 
             <nav id="nav-menu">
                 <ul>
-                    <li><a href="/">home</a></li>
+                    <li><a href={routes.home}>home</a></li>
                     <li className="autoscroll"><a href="#service">serviços</a></li>
-                    <li><a href="/criacao-de-sites">WebSite</a></li>
-                    <li><a href="/criacao-de-robos">Robotize</a></li>
+                    <li><a href={routes.criacaoDeSites}>WebSite</a></li>
+                    <li><a href={routes.criacaoDeRobos}>Robotize</a></li>
                 </ul>
             </nav>
         </div>

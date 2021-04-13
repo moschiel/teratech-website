@@ -1,10 +1,11 @@
 import React from 'react';
+import { routes } from '../Shared/constants';
 import BannerHome from './BannerHome/BannerHome';
 import BannerServices from './BannerServices/BannerServices';
 
 //RETORNA O BANNER ESCOLHIDO
 function Banner(props) {
-    if(props.route === "/")
+    if(props.route === routes.home)
         return ( <BannerHome /> );
     else {
         return ( <BannerServices route={props.route}/>)

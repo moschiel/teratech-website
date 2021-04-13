@@ -1,4 +1,5 @@
 import React from 'react';
+import { routes } from '../../components/Shared/constants';
 
 // import basic style
 import '../../components/BaseStyle/Base.css'
@@ -11,8 +12,8 @@ function WebSites() {
     return (
         <div>
             <Header />
-            <Banner route="/criacao-de-sites"/>
-            <Advantages route="/criacao-de-sites"/>
+            <Banner route={routes.criacaoDeSites}/>
+            <Advantages route={routes.criacaoDeSites}/>
         </div>
     );
 }

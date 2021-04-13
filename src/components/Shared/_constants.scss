@@ -13,22 +13,38 @@ $maxDesktop: 1200px;
 //extra large desktop
 $minExtraLargeDesktop: $maxDesktop; 
 
-
 // Very small devices
-@mixin for-phone-portrait {
+@mixin for-max-phone-portrait {
     @media (max-width: $maxPhonePortrait) { @content; } 
 }
 // Small devices (landscape phones, tablet portrait 576px ~ 768px)
-@mixin for-tablet-portrait {
+@mixin for-max-tablet-portrait {
     @media (max-width: $maxTabletPortrait) { @content; }
 }
 // Medium devices (landscape tablets, 769px ~ 992px)
-@mixin for-tablet-landscape {
+@mixin for-max-tablet-landscape {
     @media (max-width: $maxTabletLandscape) { @content; }
 }
 // Large devices (desktops, 992px ~ 1200px)
-@mixin for-desktop {
+@mixin for-max-desktop {
     @media (max-width: $maxDesktop) { @content; }
+}
+
+// Very small devices
+@mixin for-min-phone-portrait {
+    @media (min-width: $minPhonePortrait) { @content; } 
+}
+// Small devices (landscape phones, tablet portrait 576px ~ 768px)
+@mixin for-min-tablet-portrait {
+    @media (min-width: $minTabletPortrait) { @content; }
+}
+// Medium devices (landscape tablets, 769px ~ 992px)
+@mixin for-min-tablet-landscape {
+    @media (min-width: $minTabletLandscape) { @content; }
+}
+// Large devices (desktops, 992px ~ 1200px)
+@mixin for-min-desktop {
+    @media (min-width: $minDesktop) { @content; }
 }
 
 //body
@@ -51,5 +67,10 @@ $vatangemSvgHoverColor: white;
 $vatangemSvgHoverFill: white;
 $vantagemDotsCarouselColor: #d8d8d8;
 $vantagemDotsCarouselColorActive: #688293;
+//services
+$servicesBackgroundImage: linear-gradient(to top left, #703b9b, black);
+$serviceImgContainerPadding: 30px;
+$serviceSquareMargin: -20px;
+$serviceSquareBgColor: #ededed;
 
 

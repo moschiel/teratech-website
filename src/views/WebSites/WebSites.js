@@ -7,6 +7,8 @@ import '../../components/BaseStyle/Base.css'
 import Header from '../../components/Header/Header';
 import Banner from '../../components/Banner/Banner';
 import Advantages from '../../components/Advantages/Advantages';
+import DescriptionServices from '../../components/DescriptionServices/DescriptionServices';
+
 
 function WebSites() {
     return (
@@ -14,6 +16,7 @@ function WebSites() {
             <Header />
             <Banner route={routes.criacaoDeSites}/>
             <Advantages route={routes.criacaoDeSites}/>
+            <DescriptionServices route={routes.criacaoDeSites} />
         </div>
     );
 }

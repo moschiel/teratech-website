@@ -1,0 +1,103 @@
+.services {
+  border: 2px solid yellow;
+  width: 100%;
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#703b9b), to(black));
+  background-image: linear-gradient(to top left, #703b9b, black);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 70px 0 100px;
+}
+@media (max-width: 992px) {
+  .services {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.services .services-container {
+  width: 450px;
+  margin-left: 20px;
+}
+@media (max-width: 992px) {
+  .services .services-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 85%;
+  }
+}
+.services .services-container h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 50px;
+  text-transform: capitalize;
+  color: #ededed;
+}
+@media (max-width: 576px) {
+  .services .services-container h2 {
+    text-align: center;
+  }
+}
+.services .services-container .services-list {
+  color: white;
+  margin-left: 20px;
+}
+@media (max-width: 992px) {
+  .services .services-container .services-list {
+    width: 85%;
+  }
+}
+.services .services-container .services-list li {
+  width: 90%;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+@media (max-width: 992px) {
+  .services .services-container .services-list li {
+    width: 100%;
+  }
+}
+.services .services-container .services-list li p {
+  font-size: 1.2rem;
+  margin-left: 20px;
+}
+.services .service-image-container {
+  border: 2px solid yellow;
+  padding: 30px;
+  height: 450px;
+  width: 600px;
+}
+@media (max-width: 992px) {
+  .services .service-image-container {
+    display: none;
+  }
+}
+.services .service-image-container .backgroung-img-up {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  z-index: 1;
+  margin-left: -20px;
+  margin-top: -20px;
+  background-color: #ededed;
+}
+.services .service-image-container img {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}

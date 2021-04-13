@@ -2,7 +2,7 @@ import React from 'react';
 import './Advantages.css';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { responsiveBreaks } from '../Shared/constants';
+import { responsiveBreaks, routes } from '../Shared/constants';
 
 import { ReactComponent as SvgRentabilidade } from './images/analytics.svg';
 import { ReactComponent as SvgCredibilidade } from './images/aperto-de-mao.svg';
@@ -62,91 +62,92 @@ let carouselProps = {
     renderDotsOutside: true
 }
 
-const htmlAdvantageSites = [
-    (
-        <div className="vantagem-box" key="vantagem-box-1" >
-            <SvgVisibilidade />
-            <h2>Visibilidade</h2>
-            <p>
-                Seu negócio é encontrado mais facilmente nas pesquisas do Google.
-            </p>
-        </div> 
-    ),
-    (
-        <div className="vantagem-box" key="vantagem-box-2">
-            <SvgRentabilidade />
-            <h2>Rentável</h2>
-            <p>
-                Aumente suas vendas com um canal online 24 horas por dia para
-                todos os seus clientes.
-            </p>
-        </div> 
-    ),
-    (
-        <div className="vantagem-box" key="vantagem-box-2">
-            <SvgCredibilidade />
-            <h2>Credibilidade</h2>
-            <p>
-                Sua empresa ganha mais credibilidade quando sabem que seu negócio
-                tem um website.
-            </p>
-        </div> 
-    ),
-    (
-        <div className="vantagem-box" key="vantagem-box-3">
-            <SvgSeguranca />
-            <h2>Segurança</h2>
-            <p>
-                Nos adaptamos as regras de compliance e segurança de sua empresa.
-            </p>
-        </div> 
-    )
-];
+const htmlAdvantagesContent = {
+    sites: [
+        (
+            <div className="vantagem-box" key="vantagem-box-1" >
+                <SvgVisibilidade />
+                <h2>Visibilidade</h2>
+                <p>
+                    Seu negócio é encontrado mais facilmente nas pesquisas do Google.
+                </p>
+            </div> 
+        ),
+        (
+            <div className="vantagem-box" key="vantagem-box-2">
+                <SvgRentabilidade />
+                <h2>Rentável</h2>
+                <p>
+                    Aumente suas vendas com um canal online 24 horas por dia para
+                    todos os seus clientes.
+                </p>
+            </div> 
+        ),
+        (
+            <div className="vantagem-box" key="vantagem-box-2">
+                <SvgCredibilidade />
+                <h2>Credibilidade</h2>
+                <p>
+                    Sua empresa ganha mais credibilidade quando sabem que seu negócio
+                    tem um website.
+                </p>
+            </div> 
+        ),
+        (
+            <div className="vantagem-box" key="vantagem-box-3">
+                <SvgSeguranca />
+                <h2>Segurança</h2>
+                <p>
+                    Nos adaptamos as regras de compliance e segurança de sua empresa.
+                </p>
+            </div> 
+        )
+    ],
+    robots: [
+        (
+            <div className="vantagem-box" key="vantagem-box-1">
+                <SvgAgilidade />
+                <h2>Agilidade</h2>
+                <p>
+                    Otimize tempo e recursos operacionais automatizando processos.
+                </p>
+            </div> 
+        ),
+        (
+            <div className="vantagem-box" key="vantagem-box-2">
+                <SvgPraticidade />
+                <h2>Praticidade</h2>
+                <p>
+                    Integre fontes de dados confiáveis com os sistemas de sua empresa.
+                </p>
+            </div> 
+        ),
+        (
+            <div className="vantagem-box" key="vantagem-box-3">
+                <SvgCustomizacao />
+                <h2>Customização</h2>
+                <p>
+                    Criamos soluções adaptadas para o seu negócio.
+                </p>
+            </div> 
+        ),
+        (
+            <div className="vantagem-box" key="vantagem-box-4">
+                <SvgSeguranca />
+                <h2>Segurança</h2>
+                <p>
+                    Nos adaptamos as regras de compliance e segurança de sua empresa.
+                </p>
+            </div> 
+        )
+    ]
+}
 
-const htmlAdvantageRobots = [
-    (
-        <div className="vantagem-box" key="vantagem-box-1">
-            <SvgAgilidade />
-            <h2>Agilidade</h2>
-            <p>
-                Otimize tempo e recursos operacionais automatizando processos.
-            </p>
-        </div> 
-    ),
-    (
-        <div className="vantagem-box" key="vantagem-box-2">
-            <SvgPraticidade />
-            <h2>Praticidade</h2>
-            <p>
-                Integre fontes de dados confiáveis com os sistemas de sua empresa.
-            </p>
-        </div> 
-    ),
-    (
-        <div className="vantagem-box" key="vantagem-box-3">
-            <SvgCustomizacao />
-            <h2>Customização</h2>
-            <p>
-                Criamos soluções adaptadas para o seu negócio.
-            </p>
-        </div> 
-    ),
-    (
-        <div className="vantagem-box" key="vantagem-box-4">
-            <SvgSeguranca />
-            <h2>Segurança</h2>
-            <p>
-                Nos adaptamos as regras de compliance e segurança de sua empresa.
-            </p>
-        </div> 
-    )
-];
 
 
 function Advantages(props) {
     //configura estado do Carousel
-    const [autoPlayState, setAutoPlayState] = React.useState(true);
-    
+    const [stateAutoPlay, setStateAutoPlay] = React.useState(true);
     //-useEffect é chamado pela primeira vez depois do componente ser renderizado na tela
     //-funções para atualização de estado do componente devem ser escritas dentro do useEffect
     React.useEffect(()=>{
@@ -155,11 +156,11 @@ function Advantages(props) {
         //OBS: verificar como desligar o autoPlay de acordo com o tamanho da tela, assim
         //não vai mais precisa desse codigo loko.
         function handleResize() {
-            if((window.innerWidth < responsiveBreaks.forDesktop.min) && !autoPlayState){
-                setAutoPlayState(true); //redesenha componente
+            if((window.innerWidth < responsiveBreaks.forDesktop.min) && !stateAutoPlay){
+                setStateAutoPlay(true); //redesenha componente
                 // console.log('set autoPlay: ', autoPlayState);
-            }else if((window.innerWidth >= responsiveBreaks.forDesktop.min) && autoPlayState){
-                setAutoPlayState(false); //redesenha componente
+            }else if((window.innerWidth >= responsiveBreaks.forDesktop.min) && stateAutoPlay){
+                setStateAutoPlay(false); //redesenha componente
                 // console.log('unset autoPlay: ', autoPlayState);
             }
         }
@@ -178,17 +179,17 @@ function Advantages(props) {
 
     //determina quais vantagens serem renderizadas de acordo com a rota
     var htmlAdvantages;
-    if(props.route === '/criacao-de-sites')
-        htmlAdvantages = htmlAdvantageSites;
-    else if (props.route === '/criacao-de-robos')
-        htmlAdvantages = htmlAdvantageRobots;
+    if(props.route === routes.criacaoDeSites)
+        htmlAdvantages = htmlAdvantagesContent.sites;
+    else if (props.route === routes.criacaoDeRobos)
+        htmlAdvantages = htmlAdvantagesContent.robots;
 
     return(
         <section className="vantagens">
             <div className="vantagens-container center">
                 <h2>Vantagens</h2>
                 <div className="vantagem-boxes vantagem-custom-dots">
-                    <Carousel {...carouselProps} autoPlay={autoPlayState}>
+                    <Carousel {...carouselProps} autoPlay={stateAutoPlay}>
                         { htmlAdvantages }
                     </Carousel>
                 </div>

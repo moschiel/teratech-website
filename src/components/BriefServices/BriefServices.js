@@ -58,7 +58,7 @@ function BriefServices() {
                             <button>Saiba mais</button>
                         </a>
                     </div>
-                    <div class="brief-image-container">
+                    <div className="brief-image-container">
                         {htmlImages[0]}
                     </div>
                 </div>
@@ -69,7 +69,7 @@ function BriefServices() {
                             <button>Saiba mais</button>
                         </a>
                     </div>
-                    <div class="brief-image-container">
+                    <div className="brief-image-container">
                         {htmlImages[1]}
                     </div>
                 </div>

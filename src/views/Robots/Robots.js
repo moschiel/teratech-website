@@ -7,6 +7,7 @@ import '../../components/BaseStyle/Base.css'
 import Header from '../../components/Header/Header';
 import Banner from '../../components/Banner/Banner';
 import Advantages from '../../components/Advantages/Advantages';
+import DescriptionServices from '../../components/DescriptionServices/DescriptionServices';
 
 function Robots() {
     return (
@@ -14,6 +15,7 @@ function Robots() {
             <Header />
             <Banner route={routes.criacaoDeRobos} />
             <Advantages route={routes.criacaoDeRobos} />
+            <DescriptionServices route={routes.criacaoDeRobos} />
         </div>
     );
 }

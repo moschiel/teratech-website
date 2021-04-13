@@ -1,6 +1,6 @@
 import React from 'react'; 
 import $ from 'jquery';
-import { routes } from '../../Shared/constants';
+import { routes, responsiveBreaks } from '../../Shared/constants';
 import menuIconImg from './menu.png';
 import "./Navigation.css";
 
@@ -17,46 +17,46 @@ function handleNavOnMouseLeave () {
     $(".mobile-menu").slideUp();
 }
 
-//troca o modo do menu, de acordo com o tamanho atual da tela
-function setMenuMode() {
-    if($(window).width() <= 768){
-        $('#nav-menu').removeClass('desk-menu');
-        $('#nav-menu').addClass('mobile-menu');
-    }else {
-        $('#nav-menu').removeClass('mobile-menu');
-        $('#nav-menu').addClass('desk-menu');
+//resolve o bug do menu não desaparecer ao aumentar a tela com o menu baixado.
+window.addEventListener('resize', ()=> {
+    if( $(window).width() > responsiveBreaks.forTabletPortrait.max ) {
+        if($(".mobile-menu").css('display') !== 'none') {
+            $(".mobile-menu").css('display', 'none');
+        }
     }
-}
-//evento acionado quando a tela muda de tamanho 
-$(window).resize(() => {
-    setMenuMode();
 });
 
-
+function NavigationList() {
+    return (
+        <ul>
+            <li><a href={routes.home}>home</a></li>
+            <li className="autoscroll"><a href="#service">serviços</a></li>
+            <li><a href={routes.criacaoDeSites}>WebSite</a></li>
+            <li><a href={routes.criacaoDeRobos}>Robotize</a></li>
+        </ul>
+    );
+}
 
 function Navigation () {
-    //useEffect executa depois do elemento ser renderizado na tela
-    React.useEffect( () => {
-        setMenuMode();
-    });
-
     return (
-        <div className="navigation"  onMouseLeave={handleNavOnMouseLeave}>
-            <img 
-                className="menu" 
-                src={menuIconImg} 
-                alt="menu" 
-                onClick={handleMenuIconClick} 
-                onMouseEnter={handleMenuIconOnMouseEnter}
-            />
+        <div className="navigation">
+            <div className="menuIcon">
+                <img 
+                    
+                    src={menuIconImg} 
+                    alt="menu" 
+                    onClick={handleMenuIconClick} 
+                    onMouseEnter={handleMenuIconOnMouseEnter}
+                />
+            </div>
 
-            <nav id="nav-menu">
-                <ul>
-                    <li><a href={routes.home}>home</a></li>
-                    <li className="autoscroll"><a href="#service">serviços</a></li>
-                    <li><a href={routes.criacaoDeSites}>WebSite</a></li>
-                    <li><a href={routes.criacaoDeRobos}>Robotize</a></li>
-                </ul>
+            <nav id="nav-menu" className="desk-menu">
+                < NavigationList />
+            </nav>
+            <nav id="nav-menu" className="mobile-menu" 
+                onMouseLeave={handleNavOnMouseLeave}
+                onClick={handleNavOnMouseLeave}>
+                < NavigationList />
             </nav>
         </div>
     );

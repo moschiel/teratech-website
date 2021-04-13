@@ -8,13 +8,6 @@
 }
 .vantagens .vantagens-container .vantagem-boxes {
   margin-top: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 .vantagens .vantagens-container .vantagem-boxes .vantagem-box {
   padding: 25px 20px;
@@ -26,7 +19,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 1px solid #ccc;
+  border: none;
   min-height: 320px;
 }
 @media (max-width: 576px) {
@@ -64,17 +57,21 @@
   fill: white;
 }
 
-.vantagens-react-dots {
+.vantagem-custom-dots {
+  position: relative;
+  padding-bottom: 30px;
+}
+.vantagem-custom-dots .vantagens-react-dots {
   display: none;
 }
 @media (max-width: 992px) {
-  .vantagens-react-dots {
+  .vantagem-custom-dots .vantagens-react-dots {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
-.vantagens-react-dots .react-multi-carousel-dot button {
+.vantagem-custom-dots .vantagens-react-dots .react-multi-carousel-dot button {
   font-size: 0;
   line-height: 0;
   display: block;
@@ -88,6 +85,6 @@
   background-color: #d8d8d8;
   margin: 30px 10px 0 10px;
 }
-.vantagens-react-dots .react-multi-carousel-dot--active button {
+.vantagem-custom-dots .vantagens-react-dots .react-multi-carousel-dot--active button {
   background-color: #688293;
 }

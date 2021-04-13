@@ -54,12 +54,12 @@ let carouselProps = {
     swipeable: true,
     // slidesToSlide={2} // ja estamos setando isso na responsividade
     className: "",
-    containerClass: "vantagens-react-dots",
-    dotListClass: "",
+    containerClass: "",
+    dotListClass: "vantagens-react-dots",
     itemClass: "",
     sliderClass: "",
     renderButtonGroupOutside: false,
-    renderDotsOutside: false
+    renderDotsOutside: true
 }
 
 const htmlAdvantageSites = [
@@ -187,7 +187,7 @@ function Advantages(props) {
         <section className="vantagens">
             <div className="vantagens-container center">
                 <h2>Vantagens</h2>
-                <div className="vantagem-boxes">
+                <div className="vantagem-boxes vantagem-custom-dots">
                     <Carousel {...carouselProps} autoPlay={autoPlayState}>
                         { htmlAdvantages }
                     </Carousel>

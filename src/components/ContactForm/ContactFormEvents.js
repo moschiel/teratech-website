@@ -101,9 +101,9 @@ function configFormSubmitEvents() {
         // Make AJAX request
         let script_path;
         if(process.env.NODE_ENV === 'production')
-            script_path = process.env.PUBLIC_URL + "/enviar-email.php";
+            script_path = process.env.PUBLIC_URL + "/php/enviar-email.php";
         else // (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test')
-            script_path = "https://www.teratech.com.br/enviar-email.php";
+            script_path = "https://www.teratech.com.br/php/enviar-email.php";
 
         $.post( script_path, formData)
         .done(function () {

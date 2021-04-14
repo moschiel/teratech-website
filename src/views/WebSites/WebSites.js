@@ -8,7 +8,7 @@ import Header from '../../components/Header/Header';
 import Banner from '../../components/Banner/Banner';
 import Advantages from '../../components/Advantages/Advantages';
 import DescriptionServices from '../../components/DescriptionServices/DescriptionServices';
-
+import ContactForm from '../../components/ContactForm/ContactForm';
 
 function WebSites() {
     return (
@@ -17,6 +17,7 @@ function WebSites() {
             <Banner route={routes.criacaoDeSites}/>
             <Advantages route={routes.criacaoDeSites}/>
             <DescriptionServices route={routes.criacaoDeSites} />
+            <ContactForm route={routes.criacaoDeSites} />
         </div>
     );
 }

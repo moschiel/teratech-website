@@ -167,11 +167,9 @@ function Advantages(props) {
 
         //chama função na primeira inicialização
         handleResize();
-
         //configura para chamar função handleSize se a tela mudar de tamanho
         window.addEventListener('resize', handleResize);
-
-        //no retorno remove evento, para não acumular na memoria muitos EventListeners
+        //no segundo retorno remove evento, para não acumular na memoria muitos EventListeners
         return _ => {
             window.removeEventListener('resize', handleResize);
         }

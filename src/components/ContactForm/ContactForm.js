@@ -1,6 +1,7 @@
 import React from 'react';
 import './ContactForm.css';
 import { routes } from '../Shared/constants';
+import ContactFormEvents from './ContactFormEvents';
 
 const htmlContactTextContent = {
     robot: (
@@ -21,6 +22,8 @@ const htmlContactTextContent = {
 
 
 function ContactForm (props) {
+
+    React.useEffect( ContactFormEvents );
 
     let htmlContactText;
     if(props.route === routes.criacaoDeRobos)
@@ -46,14 +49,14 @@ function ContactForm (props) {
                                     <input name="email" placeholder="Escreva seu e-mail" />
                                 </label>
                                 <label>
-                                    <input type="tel" name="cel" placeholder="Escreva seu telefone" />
+                                    <input type="tel" name="cell" placeholder="Escreva seu telefone" />
                                 </label>
                             </div>
-                            <label class="label-textarea">
+                            <label className="label-textarea">
                                 <textarea name="message" placeholder="Diga em que possamos te ajudar"></textarea>
                             </label>
                         </form>
-                        <div class="button-form">
+                        <div className="button-form">
                             <button form="contact-form" type="submit">
                                 Enviar
                             </button>

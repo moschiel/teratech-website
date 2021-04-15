@@ -6,23 +6,23 @@ import bannerImgCriacaoDeSites from './images/desenvolvedor-1100.jpg';
 //BANNER SERVICE FUNCTIONS
 const htmlServiceText = [
     (
-        <div>
+        <>
             <h2>Criamos Robôs Inteligentes </h2>
             <p>
                 Desenvolvemos sistemas que fazem a automatização de tarefas repetidas, 
                 e também realizam a coleta em massa dos
                 dados importantes para o seu negócio.
             </p>
-        </div>
+        </>
     ),
     (
-        <div>
+        <>
             <h2>Criamos Sites Profissionais</h2>
             <p>
                 Posicione sua marca digitalmente.<br />
                 Tenha um site projetado para o seu negócio.
             </p>
-        </div>
+        </>
     )
 ];
 

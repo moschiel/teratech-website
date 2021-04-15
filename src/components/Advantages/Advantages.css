@@ -1,14 +1,17 @@
 .vantagens {
   padding: 70px 0 100px 0;
 }
+
 .vantagens .vantagens-container > h2 {
   text-align: center;
   font-weight: 900;
   font-size: 2.5rem;
 }
+
 .vantagens .vantagens-container .vantagem-boxes {
   margin-top: 40px;
 }
+
 .vantagens .vantagens-container .vantagem-boxes .vantagem-box {
   padding: 25px 20px;
   display: -webkit-box;
@@ -22,11 +25,13 @@
   border: none;
   min-height: 320px;
 }
+
 @media (max-width: 576px) {
   .vantagens .vantagens-container .vantagem-boxes .vantagem-box {
     border: none;
   }
 }
+
 .vantagens .vantagens-container .vantagem-boxes .vantagem-box svg {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -35,21 +40,25 @@
   margin: 0 auto;
   fill: #703b9b;
 }
+
 .vantagens .vantagens-container .vantagem-boxes .vantagem-box h2 {
   color: black;
   font-size: 1.5rem;
   font-weight: 600;
   margin: 30px 0;
 }
+
 .vantagens .vantagens-container .vantagem-boxes .vantagem-box p {
   color: #494949;
   font-weight: 400;
   font-size: 1.2rem;
 }
+
 .vantagens .vantagens-container .vantagem-boxes .vantagem-box:hover {
   background-image: -webkit-gradient(linear, right bottom, left top, from(#703b9b), to(#180d21));
   background-image: linear-gradient(to top left, #703b9b, #180d21);
 }
+
 .vantagens .vantagens-container .vantagem-boxes .vantagem-box:hover p,
 .vantagens .vantagens-container .vantagem-boxes .vantagem-box:hover h2,
 .vantagens .vantagens-container .vantagem-boxes .vantagem-box:hover svg {
@@ -61,9 +70,11 @@
   position: relative;
   padding-bottom: 30px;
 }
+
 .vantagem-custom-dots .vantagens-react-dots {
   display: none;
 }
+
 @media (max-width: 992px) {
   .vantagem-custom-dots .vantagens-react-dots {
     display: -webkit-box;
@@ -71,6 +82,7 @@
     display: flex;
   }
 }
+
 .vantagem-custom-dots .vantagens-react-dots .react-multi-carousel-dot button {
   font-size: 0;
   line-height: 0;
@@ -85,6 +97,7 @@
   background-color: #d8d8d8;
   margin: 30px 10px 0 10px;
 }
+
 .vantagem-custom-dots .vantagens-react-dots .react-multi-carousel-dot--active button {
   background-color: #688293;
 }

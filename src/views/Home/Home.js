@@ -7,14 +7,16 @@ import '../../components/BaseStyle/Base.css'
 import Header from '../../components/Header/Header';
 import Banner from '../../components/Banner/Banner';
 import BriefServices from '../../components/BriefServices/BriefServices';
+import Footer from '../../components/Footer/Footer';
 
 function Home() {
     return (
-        <div>
+        <>
             <Header />
             <Banner route={routes.home}/>
             <BriefServices />
-        </div>
+            <Footer />
+        </>
     );
 }
 

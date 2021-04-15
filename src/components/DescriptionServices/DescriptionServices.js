@@ -6,7 +6,7 @@ import imageSitesService from './images/development-together.jpg';
 
 const htmlServicesContent = {
     robot: (
-    <div>
+    <>
         <h2>desenvolvemos sistemas únicos</h2>
         <ul className="services-list">
             <li>Consulta de dados em massa: <br/>
@@ -18,10 +18,10 @@ const htmlServicesContent = {
             <li>Crawlers para coleta de dados da Web.</li>
             <li>RPA para automatização de processos repetitivos.</li>
         </ul>
-    </div>
+    </>
     ),
     sites: (
-        <div>
+        <>
             <h2>O que desenvolvemos para você</h2>
             <ul className="services-list">
                 <li>
@@ -40,7 +40,7 @@ const htmlServicesContent = {
                 site facilmente.
                 </li>
             </ul>
-        </div>
+        </>
     )
 };
 

@@ -8,7 +8,9 @@ import Header from '../../components/Header/Header';
 import Banner from '../../components/Banner/Banner';
 import Advantages from '../../components/Advantages/Advantages';
 import DescriptionServices from '../../components/DescriptionServices/DescriptionServices';
+import ContactForm from '../../components/ContactForm/ContactForm';
 import Footer from '../../components/Footer/Footer'
+
 
 function Robots() {
     return (
@@ -17,6 +19,7 @@ function Robots() {
             <Banner route={routes.criacaoDeRobos} />
             <Advantages route={routes.criacaoDeRobos} />
             <DescriptionServices route={routes.criacaoDeRobos} />
+            <ContactForm route={routes.criacaoDeRobos} />
             <Footer />
         </>
     );

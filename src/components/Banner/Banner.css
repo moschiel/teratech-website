@@ -4,13 +4,11 @@
   margin-top: 74px;
   background-color: #281537;
 }
-
 @media (max-width: 576px) {
   .banner-home {
     min-height: 550px;
   }
 }
-
 .banner-home .animate-container {
   height: 90%;
   padding: 50px 10px 0px 10px;
@@ -22,7 +20,6 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-
 .banner-home .animate-container h1 {
   width: 100%;
   font-size: clamp(3.2rem, 6vw, 7rem);
@@ -38,13 +35,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 @media (max-width: 576px) {
   .banner-services {
     min-height: 550px;
   }
 }
-
 .banner-services .banner-service-text {
   color: white;
   display: -webkit-box;
@@ -63,47 +58,40 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-
 @media (max-width: 576px) {
   .banner-services .banner-service-text {
     width: 100%;
     padding: 0 10px;
   }
 }
-
 .banner-services .banner-service-text h2 {
   margin-bottom: 20px;
   font-weight: 900;
   font-size: clamp(3rem, 4vw, 4rem);
   width: 620px;
 }
-
 @media (max-width: 768px) {
   .banner-services .banner-service-text h2 {
     width: 500px;
   }
 }
-
 @media (max-width: 576px) {
   .banner-services .banner-service-text h2 {
     text-align: center;
     width: 100%;
   }
 }
-
 .banner-services .banner-service-text p {
   width: 620px;
   text-align: left;
   font-weight: 400;
   font-size: clamp(1.3rem, 2vw, 1.5rem);
 }
-
 @media (max-width: 768px) {
   .banner-services .banner-service-text p {
     width: 500px;
   }
 }
-
 @media (max-width: 576px) {
   .banner-services .banner-service-text p {
     text-align: center;

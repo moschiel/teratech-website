@@ -3,6 +3,7 @@ import $ from 'jquery';
 import { routes, responsiveBreaks } from '../../Shared/constants';
 import menuIconImg from './menu.png';
 import "./Navigation.css";
+import { Link } from 'react-router-dom';
 
 //evento de clique do menu, que executa o slideToogle
 function handleMenuIconClick () {
@@ -29,10 +30,10 @@ window.addEventListener('resize', ()=> {
 function NavigationList() {
     return (
         <ul>
-            <li><a href={routes.home}>home</a></li>
-            <li className="autoscroll"><a href="#service">serviços</a></li>
-            <li><a href={routes.criacaoDeSites}>WebSite</a></li>
-            <li><a href={routes.criacaoDeRobos}>Robotize</a></li>
+            <li><Link to={routes.home}>home</Link></li>
+            <li className="autoscroll"><Link to="#service">serviços</Link></li>
+            <li><Link to={routes.criacaoDeSites}>WebSite</Link></li>
+            <li><Link to={routes.criacaoDeRobos}>Robotize</Link></li>
         </ul>
     );
 }

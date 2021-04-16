@@ -7,12 +7,14 @@
         display: flex;
         flex-wrap: nowrap;
         @include for-max-tablet-portrait {
-            display: flex;
             flex-direction: column;
         }
     }
-    .brief-container:first-child {
+    .brief-container:first-of-type{
         flex-direction: row-reverse;
+        @include for-max-tablet-portrait {
+            flex-direction: column;
+        }
     }
 
     .brief-image-container {

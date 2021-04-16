@@ -2,7 +2,7 @@
 //Get the contents of the JSON file
 $strJsonConfig = file_get_contents("./config.json");
 //As JSON itself is useles in PHP, we convert it to array
-$arrayJsonConfig = json_decode($strJsonConfig);
+$arrayJsonConfig = json_decode($strJsonConfig, true);
 $PHPMailerConfig = $arrayJsonConfig["PHPMailer"]; 
 
 require($PHPMailerConfig["PHPMailerPath"]);
@@ -21,16 +21,16 @@ $mail->IsSMTP(); // enable SMTP
 
 $mail->SMTPAuth = true; // authentication enabled
 $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
-$mail->Host = PHPMailerConfig["Host"];
-$mail->Port = PHPMailerConfig["Port"]; 
+$mail->Host = $PHPMailerConfig["Host"];
+$mail->Port = $PHPMailerConfig["Port"]; 
 $mail->IsHTML(true);
-$mail->Username = PHPMailerConfig["Username"];
-$mail->Password = PHPMailerConfig["Password"];
+$mail->Username = $PHPMailerConfig["Email"];
+$mail->Password = $PHPMailerConfig["Password"];
  
 $mail->SetFrom($email, $nome);
 $mail->Subject = "Contato do Formulario";
-$mail->Body = "Nome: " .$nome . "<br>Celular: " . $cell . "<br>Mensagem: " . $message;
-$mail->AddAddress(PHPMailerConfig["Email"]);
+$mail->Body = "Nome: " . $nome . "<br>Celular: " . $cell . "<br>Mensagem: " . $message;
+$mail->AddAddress($PHPMailerConfig["Email"]);
 
 
 if(!$mail->Send()) {

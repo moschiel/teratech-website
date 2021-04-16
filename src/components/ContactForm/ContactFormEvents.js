@@ -98,13 +98,14 @@ function configFormSubmitEvents() {
         var formData = serializeForm(event);
         console.log("Ajax Request: ", formData);
 
-        // Make AJAX request
+        console.log('ENV: ', process.env.NODE_ENV);
         let script_path;
-        if(process.env.NODE_ENV === 'production')
+        if(process.env.NODE_ENV === 'production') 
             script_path = process.env.PUBLIC_URL + "/php/enviar-email.php";
         else // (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test')
             script_path = "https://www.teratech.com.br/php/enviar-email.php";
-
+        
+        // Make AJAX request
         $.post( script_path, formData)
         .done(function () {
             //limpa formulario e envia mensagem de sucesso

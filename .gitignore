@@ -5,9 +5,6 @@
 /.pnp
 .pnp.js
 
-#força git a não excluir a pasta .vscode pois temos a configuração do SASS nela
-!.vscode/
-
 # testing
 /coverage
 
@@ -24,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#força git a não excluir a pasta .vscode pois temos a configuração do SASS nela
+!.vscode/
+
+#dados do email
+/public/php/config.json

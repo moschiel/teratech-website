@@ -4,8 +4,8 @@ import robotServiceImage from './images/innovation-edit.jpg';
 import sitesServiceImage from './images/sketch-edit.jpg';
 import { routes } from '../Shared/constants';
 
-const htmlServicesText = [
-    (
+const htmlServicesText = {
+    robot: (
         <>
             <h2>RPA, Crawlers e APIs</h2>
             <p>
@@ -16,7 +16,7 @@ const htmlServicesText = [
             <p>Desenvolvemos APIs que são integradas aos seus sistemas.</p>
         </>
     ),
-    (
+    sites: (
         <>
             <h2>Criação de Sites</h2>
             <p>Ter um site hoje em dia é essencial para qualquer negócio.</p>
@@ -27,24 +27,24 @@ const htmlServicesText = [
             </p>
         </>
     )
-];
+};
 
-const htmlImages = [
-    (
+const htmlImages = {
+    robot: (
         <>
             <img src={robotServiceImage} 
             alt="robotServiceImage" 
             title="Hand photo created by jcomp - www.freepik.com"/>
         </>
     ),
-    (
+    sites: (
         <>
             <img src={sitesServiceImage} 
             alt="sitesServiceImage" 
             title="Photo by Alvaro Reyes on Unsplash" />
         </>
     )
-]
+};
 
 
 function BriefServices() {
@@ -53,24 +53,24 @@ function BriefServices() {
             <section id="brief-services">
                 <div className="brief-container">
                     <div className="brief-text-container">
-                        {htmlServicesText[0]}
+                        {htmlServicesText.robot}
                         <a href={routes.criacaoDeRobos}>
                             <button>Saiba mais</button>
                         </a>
                     </div>
                     <div className="brief-image-container">
-                        {htmlImages[0]}
+                        {htmlImages.robot}
                     </div>
                 </div>
                 <div className="brief-container">
                     <div className="brief-text-container">
-                        {htmlServicesText[1]}
+                        {htmlServicesText.sites}
                         <a href={routes.criacaoDeSites}>
                             <button>Saiba mais</button>
                         </a>
                     </div>
                     <div className="brief-image-container">
-                        {htmlImages[1]}
+                        {htmlImages.sites}
                     </div>
                 </div>
             </section>

@@ -1,7 +1,9 @@
+# allow direct access for some url, useful to test form on development env
 <IfModule mod_headers.c>
     Header set Access-Control-Allow-Origin "*"
 </IfModule>
 
+# it is need for react app routes to work
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /

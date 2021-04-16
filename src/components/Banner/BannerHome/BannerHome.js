@@ -5,12 +5,9 @@ import typeAnimation from './typeAnimation';
 function BannerHome() {
     //useEffect runs code inside it, after component is rendered on screen
     React.useEffect(() => {
-        window.addEventListener('load', () => {
-            typeAnimation();
-        });
-        console.log('load');
+        typeAnimation();
     });
-
+    
     return (
         <div className="banner-home" >
             <div className="animate-container center">

@@ -14,6 +14,10 @@ body {
   background-color: #ededed;
 }
 
+body {
+  min-width: 300px;
+}
+
 .center {
   width: 100%;
   margin: 0 auto;

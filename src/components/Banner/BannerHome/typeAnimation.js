@@ -8,15 +8,16 @@ var animations = [
     'que trazem\nresultados reais.',
 ]; /* The text */
 
-let animateTextId1 = 'animate-text-1';
-let animateTextId2 = 'animate-text-2';
 
+let animateText1, animateText2;
 var charIndex, writeSpeed, eraseSpeed, speed, animation_index, txt, writing, first_animation;
 var blinkCount, showCursor;
 
 function typeAnimation() {
-    document.getElementById(animateTextId1).innerHTML = "";
-    document.getElementById(animateTextId2).innerHTML = "";
+    animateText1 = document.getElementById('animate-text-1');
+    animateText2 = document.getElementById('animate-text-2');
+    animateText1.innerHTML = "";
+    animateText2.innerHTML = "";
 
     charIndex = 0;          //posição do caractere atual
     writeSpeed = 50;        //delay de escrita entre cada caractere
@@ -36,9 +37,9 @@ function typeAnimation() {
 function typeWriter() {
     if(first_animation) { //entra aqui apenas se estamos escrevendo a primeira frase
         if (charIndex < txt.length) { //se ainda naõ terminou de escrever, adiciona um caractere no final
-            let htmlStr = document.getElementById(animateTextId1).innerHTML;
+            let htmlStr = animateText1.innerHTML;
             htmlStr += txt.charAt(charIndex)==='\n'?'<br>':txt.charAt(charIndex); //adiciona <br> no lugar de /n para pular linha
-            document.getElementById(animateTextId1).innerHTML = htmlStr; //atualiza DOM
+            animateText1.innerHTML = htmlStr; //atualiza DOM
             charIndex++;    //pula para proximo caractere
             
         }else{ //entra aqui se terminou a escrita da primeira frase
@@ -52,7 +53,7 @@ function typeWriter() {
     else { //entra aqui para todas as frases após a primeira, pois estas devem escritas e tambem apagadas na animação
         //se ainda não terminou de escrever, e se não terminou a quantidade de frases animadas
         if (charIndex < txt.length && animation_index < animations.length) {
-            let htmlStr = document.getElementById(animateTextId2).innerHTML;
+            let htmlStr = animateText2.innerHTML;
             if(writing) { //se modo writing, adiciona caractere no final
                 htmlStr += txt.charAt(charIndex)==='\n'?'<br>':txt.charAt(charIndex);
             } 
@@ -60,7 +61,7 @@ function typeWriter() {
                 htmlStr = htmlStr.substring(0, htmlStr.length-1);
             }
             //atualiza no DOM
-            document.getElementById(animateTextId2).innerHTML = htmlStr;
+            animateText2.innerHTML = htmlStr;
             //aponta para o proximo caractere da frase
             charIndex++;
 
@@ -89,7 +90,7 @@ function typeWriter() {
 
 
 function blinkCursorWriter(){
-    let htmlStr = document.getElementById(animateTextId2).innerHTML;
+    let htmlStr = animateText2.innerHTML;
     if(showCursor) {
         htmlStr += '|'; //insere o cursor no final
     } 
@@ -97,7 +98,7 @@ function blinkCursorWriter(){
         htmlStr = htmlStr.substring(0, htmlStr.length-1); //apaga o cursor no final
     }
     //atualiza o DOM
-    document.getElementById(animateTextId2).innerHTML = htmlStr;
+    animateText2.innerHTML = htmlStr;
     showCursor = !showCursor; //inverte estado de visibilidade do cursor
     blinkCount++;
     //descomentar linhas com 'lastAnimation' para o cursor piscar infinitamente

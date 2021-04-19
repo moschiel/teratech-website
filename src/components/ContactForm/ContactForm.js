@@ -68,4 +68,8 @@ function ContactForm (props) {
     );
 }
 
+ContactForm.defaultProps = {
+    route: routes.criacaoDeSites
+};
+
 export default ContactForm;

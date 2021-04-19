@@ -4,8 +4,8 @@ import bannerImgCriacaoDeRobos from './images/capa.png';
 import bannerImgCriacaoDeSites from './images/desenvolvedor-1100.jpg';
 
 //BANNER SERVICE FUNCTIONS
-const htmlServiceText = [
-    (
+const htmlServiceText = {
+    robot: (
         <>
             <h2>Criamos Robôs Inteligentes </h2>
             <p>
@@ -15,7 +15,7 @@ const htmlServiceText = [
             </p>
         </>
     ),
-    (
+    sites: (
         <>
             <h2>Criamos Sites Profissionais</h2>
             <p>
@@ -24,18 +24,18 @@ const htmlServiceText = [
             </p>
         </>
     )
-];
+};
 
 function BannerServices(props) {
 
     let bannerImg, htmlContent;
     if(props.route === '/criacao-de-robos') {
         bannerImg = bannerImgCriacaoDeRobos;
-        htmlContent = htmlServiceText[0];
+        htmlContent = htmlServiceText.robot;
     }
     else if(props.route === '/criacao-de-sites'){
         bannerImg = bannerImgCriacaoDeSites;
-        htmlContent = htmlServiceText[1];
+        htmlContent = htmlServiceText.sites;
     }
     else {
         console.log('Erro: rota desconhecida');

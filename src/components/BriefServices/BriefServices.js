@@ -79,4 +79,8 @@ function BriefServices() {
     );
 }
 
+BriefServices.defaultProps = {
+    route: routes.criacaoDeSites
+};
+
 export default BriefServices;

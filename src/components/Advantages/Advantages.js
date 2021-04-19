@@ -38,7 +38,7 @@ const carouselBreakpoints = {
         slidesToSlide: 1
     }
 }
-let carouselProps = {
+const carouselProps = {
     responsive: carouselBreakpoints,
     // autoPlay: true, //esse parametro sera usado com React.useState
     autoPlaySpeed: 3000,
@@ -61,7 +61,6 @@ let carouselProps = {
     renderButtonGroupOutside: false,
     renderDotsOutside: true
 }
-
 const htmlAdvantagesContent = {
     sites: [
         (
@@ -143,25 +142,16 @@ const htmlAdvantagesContent = {
     ]
 }
 
-
-
 function Advantages(props) {
-    //configura estado do Carousel
     const [stateAutoPlay, setStateAutoPlay] = React.useState(true);
-    //-useEffect é chamado pela primeira vez depois do componente ser renderizado na tela
-    //-funções para atualização de estado do componente devem ser escritas dentro do useEffect
+
     React.useEffect(()=>{
-        //redesenha componente se modo autoPlay mudar de estado
-        //pois é necessario refazer o componente do zero para a alteração de autoPlay funcionar
-        //OBS: verificar como desligar o autoPlay de acordo com o tamanho da tela, assim
-        //não vai mais precisa desse codigo loko.
+        //atualiza modo autoPlay do componente de acordo com tamanho da tela
         function handleResize() {
             if((window.innerWidth < responsiveBreaks.forDesktop.min) && !stateAutoPlay){
-                setStateAutoPlay(true); //redesenha componente
-                // console.log('set autoPlay: ', autoPlayState);
+                setStateAutoPlay(true);
             }else if((window.innerWidth >= responsiveBreaks.forDesktop.min) && stateAutoPlay){
-                setStateAutoPlay(false); //redesenha componente
-                // console.log('unset autoPlay: ', autoPlayState);
+                setStateAutoPlay(false);
             }
         }
 
@@ -192,9 +182,12 @@ function Advantages(props) {
                     </Carousel>
                 </div>
             </div>
-            
         </section>
     );
 }
+
+Advantages.defaultProps = {
+    route: routes.criacaoDeSites
+};
 
 export default Advantages;

@@ -86,4 +86,8 @@ function DescriptionServices(props) {
     );
 }
 
+DescriptionServices.defaultProps = {
+    route: routes.criacaoDeSites
+};
+
 export default DescriptionServices;

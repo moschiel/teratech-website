@@ -12,4 +12,8 @@ function Banner(props) {
     }
 }
 
+Banner.defaultProps = {
+    route: routes.home
+};
+
 export default Banner;

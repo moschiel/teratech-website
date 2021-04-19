@@ -32,17 +32,14 @@ function validateFormInputs() {
         alert("Erro: nome inválido");
         return false;
     }
-
     if (checkValue(inputEmail, regexEmail, true) === false) {
         alert("Erro: email inválido");
         return false;
     }
-
     if (checkValue(inputCell, regexCell, true) === false) {
         alert("Erro: Número de contato inválido");
         return false;
     }
-
     if (checkValue(inputMessage, regexMessage, true) === false) {
         alert("Erro: preencha a mensagem por favor");
         return false;
@@ -88,17 +85,15 @@ function configFormSubmitEvents() {
     var form = document.getElementById('contact-form'); 
 
     form.onsubmit = (event) => {
-        console.log('prevent-default');
         event.preventDefault();
-        
         if (validateFormInputs() === false) {
             return;
         }
 
         var formData = serializeForm(event);
-        console.log("Ajax Request: ", formData);
 
         console.log('ENV: ', process.env.NODE_ENV);
+
         let script_path;
         if(process.env.NODE_ENV === 'production') 
             script_path = process.env.PUBLIC_URL + "/php/enviar-email.php";
@@ -124,8 +119,6 @@ function configFormSubmitEvents() {
 
 // Chame essa função no componente para configurar os eventos
 function ContactFormEvents() {
-    console.log('ContactFormEvents configured');
-
     //pega referências aos elementos DOM
     inputName = document.querySelector('input[name="name"]');
     inputEmail = document.querySelector('input[name="email"]');

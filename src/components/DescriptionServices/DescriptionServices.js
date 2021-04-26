@@ -59,6 +59,7 @@ const imageServicesContent = {
 function DescriptionServices(props) {
 
     let htmlServices, imageServices;
+
     if(props.route === routes.criacaoDeRobos) {
         htmlServices = htmlServicesContent.robot;
         imageServices = imageServicesContent.robot;
@@ -73,6 +74,7 @@ function DescriptionServices(props) {
             <div className="services-container">
                 {htmlServices}
             </div> 
+
             <div className="service-image-container">
                 <div className="backgroung-img-up"></div>
                 <img 

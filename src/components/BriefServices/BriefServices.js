@@ -59,6 +59,7 @@ function BriefServices() {
                         </a>
                     </div>
                     <div className="brief-image-container">
+                    <div className="backgroung-img-up-robot"></div>
                         {htmlImages.robot}
                     </div>
                 </div>
@@ -70,6 +71,7 @@ function BriefServices() {
                         </a>
                     </div>
                     <div className="brief-image-container">
+                    <div className="backgroung-img-up-web"></div>
                         {htmlImages.sites}
                     </div>
                 </div>

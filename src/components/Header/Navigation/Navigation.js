@@ -30,7 +30,7 @@ function NavigationList() {
     return (
         <ul>
             <li><a href={routes.home}>home</a></li>
-            <li className="autoscroll"><a href="#service">serviços</a></li>
+            <li className="autoscroll"><a href="#brief-services">serviços</a></li>
             <li><a href={routes.criacaoDeSites}>WebSite</a></li>
             <li><a href={routes.criacaoDeRobos}>Robotize</a></li>
         </ul>

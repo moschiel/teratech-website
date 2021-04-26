@@ -6,45 +6,61 @@ $minTabletPortrait: $maxPhonePortrait;
 $maxTabletPortrait: 768px;
 //tablet landscape
 $minTabletLandscape: $maxTabletPortrait;
-$maxTabletLandscape: 992px; 
+$maxTabletLandscape: 992px;
 //desktop
 $minDesktop: $maxTabletLandscape;
 $maxDesktop: 1200px;
 //extra large desktop
-$minExtraLargeDesktop: $maxDesktop; 
+$minExtraLargeDesktop: $maxDesktop;
 
 // Very small devices
 @mixin for-max-phone-portrait {
-    @media (max-width: $maxPhonePortrait) { @content; } 
+  @media (max-width: $maxPhonePortrait) {
+    @content;
+  }
 }
 // Small devices (landscape phones, tablet portrait 576px ~ 768px)
 @mixin for-max-tablet-portrait {
-    @media (max-width: $maxTabletPortrait) { @content; }
+  @media (max-width: $maxTabletPortrait) {
+    @content;
+  }
 }
 // Medium devices (landscape tablets, 769px ~ 992px)
 @mixin for-max-tablet-landscape {
-    @media (max-width: $maxTabletLandscape) { @content; }
+  @media (max-width: $maxTabletLandscape) {
+    @content;
+  }
 }
 // Large devices (desktops, 992px ~ 1200px)
 @mixin for-max-desktop {
-    @media (max-width: $maxDesktop) { @content; }
+  @media (max-width: $maxDesktop) {
+    @content;
+  }
 }
 
 // Very small devices
 @mixin for-min-phone-portrait {
-    @media (min-width: $minPhonePortrait) { @content; } 
+  @media (min-width: $minPhonePortrait) {
+    @content;
+  }
 }
 // Small devices (landscape phones, tablet portrait 576px ~ 768px)
 @mixin for-min-tablet-portrait {
-    @media (min-width: $minTabletPortrait) { @content; }
+  @media (min-width: $minTabletPortrait) {
+    @content;
+  }
 }
 // Medium devices (landscape tablets, 769px ~ 992px)
 @mixin for-min-tablet-landscape {
-    @media (min-width: $minTabletLandscape) { @content; }
+  @media (min-width: $minTabletLandscape) {
+    @content;
+  }
 }
 // Large devices (desktops, 992px ~ 1200px)
 @mixin for-min-desktop {
-    @media (min-width: $minDesktop) { @content; }
+  @media (min-width: $minDesktop) {
+    @content;
+  }
 }
 
 //body
@@ -79,4 +95,3 @@ $formInputBorderValidColor: #703b9b;
 $formInputBorderInvalidColor: red;
 $formButtonColor: #472562;
 $formButtonHoverColor: #703b9b;
-

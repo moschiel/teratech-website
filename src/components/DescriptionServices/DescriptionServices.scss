@@ -1,77 +1,92 @@
-@import '../Shared/constants';
+@import "../Shared/constants";
 
 .services {
-    width: 100%;
-    background-image: $servicesBackgroundImage;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 70px 0 100px;
+  width: 100%;
+  background-image: $servicesBackgroundImage;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0 100px;
+
+  @include for-max-tablet-landscape {
+    flex-direction: column;
+  }
+
+  .services-container {
+    width: 450px;
+    margin-left: 20px;
+
     @include for-max-tablet-landscape {
-        flex-direction: column;
+      display: flex;
+      flex-direction: column;
+      width: 85%;
     }
-    .services-container {
-        width: 450px;
-        margin-left: 20px;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin-bottom: 50px;
+      text-transform: capitalize;
+      color: #ededed;
+
+      @include for-max-phone-portrait {
+        text-align: center;
+      }
+    }
+
+    .services-list {
+      color: white;
+      margin-left: 20px;
+
+      @include for-max-tablet-landscape {
+        width: 85%;
+      }
+
+      li {
+        width: 90%;
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 1.5;
+        margin: 20px 0;
+
         @include for-max-tablet-landscape {
-            display: flex;
-            flex-direction: column;
-            width: 85%;
+          width: 100%;
+          // list-style: inside;
         }
-        h2 {
-            font-size: 2.5rem;
-            font-weight: 900;
-            margin-bottom: 50px;
-            text-transform: capitalize;
-            color: #ededed;
-            @include for-max-phone-portrait {
-                text-align: center;
-            }
+
+        p {
+          font-size: 1.2rem;
+          margin-left: 20px;
         }
-        .services-list {
-            color: white;
-            margin-left: 20px;
-            @include for-max-tablet-landscape {
-                width: 85%;
-            }
-            li {
-                width: 90%;
-                font-size: 1.2rem;
-                font-weight: 400;
-                line-height: 1.5;
-                margin: 20px 0;
-                @include for-max-tablet-landscape {
-                    width: 100%;
-                    // list-style: inside;
-                }
-                p {
-                    font-size: 1.2rem;
-                    margin-left: 20px;
-                }
-            }
-        }
+      }
     }
-    .service-image-container {
-        padding: $serviceImgContainerPadding;
-        height: 450px;
-        width: 600px;
-        @include for-max-tablet-landscape {
-            display: none;
-        }
-        .backgroung-img-up {
-            width: 250px;
-            height: 250px;
-            position: absolute;
-            z-index: 1;
-            margin-left: $serviceSquareMargin;
-            margin-top: $serviceSquareMargin;
-            background-color: $serviceSquareBgColor;
-        }
-        img {
-            height: 100%;
-            width: 100%;
-            position: relative;
-            z-index: 2;
-        }
+  }
+
+  .service-image-container {
+    padding: $serviceImgContainerPadding;
+    height: 450px;
+    width: 600px;
+
+    @include for-max-tablet-landscape {
+      display: none;
     }
+
+    .backgroung-img-up {
+      width: 250px;
+      height: 250px;
+      position: absolute;
+      z-index: 1;
+      margin-left: $serviceSquareMargin;
+      margin-top: $serviceSquareMargin;
+      background-color: $serviceSquareBgColor;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    
+  }
 }

@@ -112,16 +112,27 @@
   font-size: 1.2rem;
 }
 
-#brief-services .brief-text-container a button {
+#brief-services .brief-text-container button {
   padding: 15px 30px;
   border: none;
   background-color: #472562;
-  font-size: 1.2rem;
-  color: white;
   cursor: pointer;
   margin-top: 45px;
 }
 
-#brief-services .brief-text-container a button:hover {
+#brief-services .brief-text-container button a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  outline: none;
+}
+
+#brief-services .brief-text-container button:hover {
   background-color: #703b9b;
+}
+
+#brief-services .brief-text-container button:focus {
+  outline-style: dashed;
+  outline-width: 2px;
+  outline-color: blueviolet;
 }

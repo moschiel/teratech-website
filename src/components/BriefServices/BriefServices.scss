@@ -23,8 +23,8 @@
     padding: $serviceImgContainerPadding;
     height: 450px;
     width: 600px;
-    position:relative;
- 
+    position: relative;
+
     @include for-max-tablet-landscape {
       display: none;
     }
@@ -64,13 +64,13 @@
     @include for-max-tablet-portrait {
       width: 100%;
     }
-    
+
     @include for-max-tablet-landscape {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: 100%;
-        padding-left: 50px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      padding-left: 50px;
     }
 
     h2 {
@@ -85,19 +85,28 @@
       font-size: 1.2rem;
     }
 
-    a {
-      button {
-        padding: 15px 30px;
-        border: none;
-        background-color: $buttonColor;
-        font-size: 1.2rem;
+    button {
+      padding: 15px 30px;
+      border: none;
+      background-color: $buttonColor;
+      cursor: pointer;
+      margin-top: 45px;
+
+      a {
         color: white;
-        cursor: pointer;
-        margin-top: 45px;
+        font-size: 1.2rem;
+        text-decoration: none;
+        outline: none;
       }
 
-      button:hover {
+      &:hover {
         background-color: $buttonHoverColor;
+      }
+
+      &:focus {
+        outline-style: dashed;
+        outline-width: 2px;
+        outline-color: blueviolet;  
       }
     }
   }

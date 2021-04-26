@@ -30,6 +30,7 @@
 
 .navigation nav.desk-menu ul li {
   margin: auto 18px;
+  outline: none;
 }
 
 .navigation nav.desk-menu ul li a {
@@ -38,6 +39,13 @@
   color: white;
   font-weight: 600;
   font-size: 1.2rem;
+  padding: 5px;
+}
+
+.navigation nav.desk-menu ul li a:focus {
+  outline-style: dashed;
+  outline-width: 2px;
+  outline-color: blueviolet;
 }
 
 .navigation nav.desk-menu ul li a:hover {

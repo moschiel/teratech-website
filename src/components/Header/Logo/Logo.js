@@ -13,7 +13,7 @@ function Logo() {
     return (
         <div className="logo" >
             <a href={routes.home}>
-                <img src={logoSVG} alt="logo" />
+                <img src={logoSVG} alt="logo" tabIndex="0" />
             </a>
         </div>
     );

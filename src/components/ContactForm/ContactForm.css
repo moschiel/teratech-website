@@ -178,3 +178,7 @@
 .contact-section .contact-container .contact-form-container .button-form button:hover {
   background-color: #703b9b;
 }
+
+.contact-section .contact-container .contact-form-container .button-form button:focus {
+  outline: 2px dashed blueviolet;
+}

@@ -1,7 +1,7 @@
-import React from 'react';
-import logoSVG from './logo_teratech_branco_linha.svg';
-import './Logo.css';
-import { routes } from '../../Shared/constants';
+import React from "react";
+import logoSVG from "./logo_teratech_branco_linha.svg";
+import "./Logo.css";
+import { routes } from "../../Shared/constants";
 
 /* no arquivo svg, viewBox é usado para cortar o SVG: 
    1 - pos x dentro dentro da view, 
@@ -10,13 +10,13 @@ import { routes } from '../../Shared/constants';
    4 - altura da view */
 
 function Logo() {
-    return (
-        <div className="logo" >
-            <a href={routes.home}>
-                <img src={logoSVG} alt="logo" tabIndex="0" />
-            </a>
-        </div>
-    );
+  return (
+    <div className="logo">
+      <a href={routes.home}>
+        <img src={logoSVG} alt="logo" tabIndex="0" />
+      </a>
+    </div>
+  );
 }
 
 export default Logo;

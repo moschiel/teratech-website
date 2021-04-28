@@ -1,89 +1,91 @@
 @import "../../Shared/constants";
 
 .navigation {
-    width: fit-content;
-    height: 100%;
-    padding: 0 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: fit-content;
+  height: 100%;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    nav.desk-menu {
-        //desaparece de 0px ate tablet-portrait
-        @include for-max-tablet-portrait {
-            display: none;
-        } 
-
-        ul {
-            display: flex;
-            list-style: none;
-
-            li {
-                margin: auto 18px;
-                outline:none;
-
-                a {
-                    text-transform: capitalize;
-                    text-decoration: none;
-                    color: white;
-                    font-weight: 600;
-                    font-size: 1.2rem;
-                    padding: 5px;
-
-                    &:focus{
-                            outline-style: dashed;
-                            outline-width: 2px;
-                            outline-color: blueviolet;              
-                    }
-                }
-
-                a:hover {
-                    color: $menuHoverColor;
-                }
-            }
-        }
+  nav.desk-menu {
+    //desaparece de 0px ate tablet-portrait
+    @include for-max-tablet-portrait {
+      display: none;
     }
 
-    nav.mobile-menu {
-        display: none; //alterado via slideToogle() do jquery
-        position: absolute;
-        left: 0px;
-        top: $headerHeight;
-        width: 100%;
+    ul {
+      display: flex;
+      list-style: none;
 
-        ul {
+      li {
+        margin: auto 18px;
 
-            li {
-                height: 60px;
-                padding: 15px 0;
-                text-align: center;
-                background-color: $menuColor;
+        a {
+          padding: 5px;
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 1.2rem;
+          text-transform: capitalize;
+          color: white;
 
-                a {
-                    text-decoration: none;
-                    color: white;
-                    width: 100%;
-                    cursor: pointer;
-                    display: block;
-                    text-transform: capitalize;
-                    font-size: 1.2rem;
-                }
-            }
+          &:focus {
+            padding: 5px;
+            outline: 2px dashed blueviolet;
+          }
 
-            li:hover{
-                background-color: $menuHoverColor;
-            }
+          &:active {
+            outline: 0;
+            border: none;
+          }
         }
+
+        a:hover {
+          color: $menuHoverColor;
+        }
+      }
+    }
+  }
+
+  nav.mobile-menu {
+    display: none; //alterado via slideToogle() do jquery
+    position: absolute;
+    left: 0px;
+    top: $headerHeight;
+    width: 100%;
+
+    ul {
+      li {
+        height: 60px;
+        padding: 15px 0;
+        text-align: center;
+        background-color: $menuColor;
+
+        a {
+          text-decoration: none;
+          color: white;
+          width: 100%;
+          cursor: pointer;
+          display: block;
+          text-transform: capitalize;
+          font-size: 1.2rem;
+        }
+      }
+
+      li:hover {
+        background-color: $menuHoverColor;
+      }
+    }
+  }
+
+  .menuIcon {
+    //desaparece apartir de tablet-landscape range
+    @include for-min-tablet-landscape {
+      display: none;
     }
 
-    .menuIcon {
-        //desaparece apartir de tablet-landscape range
-        @include for-min-tablet-landscape {
-            display: none;
-        } 
-
-        img {
-            cursor: pointer;
-        }
+    img {
+      cursor: pointer;
     }
+  }
 }

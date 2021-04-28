@@ -57,7 +57,7 @@ function BriefServices() {
         <div className="brief-container">
           <div className="brief-text-container">
             {htmlServicesText.robot}
-            <button>
+            <button tabIndex="6">
               <a href={routes.criacaoDeRobos}>Saiba mais</a>
             </button>
           </div>
@@ -69,7 +69,7 @@ function BriefServices() {
         <div className="brief-container">
           <div className="brief-text-container">
             {htmlServicesText.sites}
-            <button>
+            <button tabIndex="7">
               <a href={routes.criacaoDeSites}>Saiba mais</a>
             </button>
           </div>

@@ -5,18 +5,23 @@
   cursor: pointer;
   margin-top: 4px;
 
-  a {
+  a, a:active, a:focus {
     outline: none;
   }
         
   img {
     height: 100%;
     width: 100%;
+
+    &:focus {
+      outline-style: dashed;
+      outline-width: 2px;
+      outline-color: blueviolet;
+    }
+
+    &:active{
+      border-style: none;
+    }
   }
 
-  img:focus {
-    outline-style: dashed;
-    outline-width: 2px;
-    outline-color: blueviolet;
-  }
 }

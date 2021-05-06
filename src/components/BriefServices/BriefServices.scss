@@ -1,30 +1,67 @@
 @import "../Shared/constants";
 
-#brief-services {
-  .brief-container {
-    padding-top: 50px;
-    display: flex;
-    flex-wrap: nowrap;
+.brief-text-container {
+  width: 50%;
+  padding: 50px 30px;
 
-    @include for-max-tablet-portrait {
-      flex-direction: column;
-    }
+  @include for-max-tablet-portrait {
+    width: 100%;
   }
 
-  .brief-container:first-of-type {
-    flex-direction: row-reverse;
+  @include for-max-tablet-landscape {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 50px;
+  }
 
-    @include for-max-tablet-portrait {
-      flex-direction: column;
+  h2 {
+    font-size: 2.5rem;
+    margin: 0 0 20px 0;
+    font-weight: 900;
+    color: #281537;
+  }
+
+  p {
+    margin: 7px 0;
+    font-size: 1.2rem;
+  }
+
+  a {
+    button {
+      padding: 15px 30px;
+      border: none;
+      background-color: $buttonColor;
+      font-size: 1.2rem;
+      color: white;
+      cursor: pointer;
+      margin-top: 45px;
     }
+
+    button:hover {
+      background-color: $buttonHoverColor;
+    }
+  }
+}
+
+.brief-container-robot {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+
+  @include for-max-tablet-portrait {
+    flex-direction: column;
   }
 
   .brief-image-container {
     padding: $serviceImgContainerPadding;
     height: 450px;
     width: 600px;
-    position:relative;
- 
+    position: relative;
+
     @include for-max-tablet-landscape {
       display: none;
     }
@@ -39,12 +76,41 @@
       background-color: $buttonColor;
     }
 
+    img {
+      height: 100%;
+      width: 96%;
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+.brief-container-web {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  @include for-max-tablet-portrait {
+    flex-direction: column;
+  }
+
+  .brief-image-container {
+    padding: $serviceImgContainerPadding;
+    height: 450px;
+    width: 600px;
+    position: relative;
+
+    @include for-max-tablet-landscape {
+      display: none;
+    }
+
     .backgroung-img-up-web {
       width: 250px;
       height: 250px;
       position: absolute;
       z-index: 1;
-      margin-left: $serviceSquareMargin;
+      margin-left: 25px;
       margin-top: $serviceSquareMargin;
       background-color: $buttonColor;
     }
@@ -54,51 +120,7 @@
       width: 96%;
       position: relative;
       z-index: 2;
-    }
-  }
-
-  .brief-text-container {
-    width: 50%;
-    padding: 50px 30px;
-
-    @include for-max-tablet-portrait {
-      width: 100%;
-    }
-    
-    @include for-max-tablet-landscape {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: 100%;
-        padding-left: 50px;
-    }
-
-    h2 {
-      font-size: 2.5rem;
-      margin: 0 0 20px 0;
-      font-weight: 900;
-      color: #281537;
-    }
-
-    p {
-      margin: 7px 0;
-      font-size: 1.2rem;
-    }
-
-    a {
-      button {
-        padding: 15px 30px;
-        border: none;
-        background-color: $buttonColor;
-        font-size: 1.2rem;
-        color: white;
-        cursor: pointer;
-        margin-top: 45px;
-      }
-
-      button:hover {
-        background-color: $buttonHoverColor;
-      }
+      margin-left: 45px;
     }
   }
 }

@@ -1,11 +1,27 @@
 .logo {
+  height: 90%;
+  width: 220px;
+  padding: 0 20px;
+  cursor: pointer;
+  margin-top: 4px;
+
+  a, a:active, a:focus {
+    outline: none;
+  }
+        
+  img {
     height: 100%;
-    width: 220px;
-    padding: 0 20px;
-    cursor: pointer; 
-    
-    img {
-        height: 100%;
-        width: 100%;
+    width: 100%;
+
+    &:focus {
+      outline-style: dashed;
+      outline-width: 2px;
+      outline-color: blueviolet;
     }
+
+    &:active{
+      border-style: none;
+    }
+  }
+
 }

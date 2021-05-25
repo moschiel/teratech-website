@@ -66,7 +66,6 @@ function BriefServices() {
             {htmlImages.robot}
           </div>
         </div>
-
         <div className="brief-container-web">
           <div className="brief-text-container">
             {htmlServicesText.sites}

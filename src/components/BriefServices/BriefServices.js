@@ -52,26 +52,26 @@ const htmlImages = {
 
 function BriefServices() {
   return (
-    <main className="center">
-      <section id="brief-services">
-        <div className="brief-container">
+    <main className="center" id="brief-services">
+      <section>
+        <div className="brief-container-robot">
           <div className="brief-text-container">
             {htmlServicesText.robot}
-            <button tabIndex="6">
-              <a href={routes.criacaoDeRobos}>Saiba mais</a>
-            </button>
+            <a href={routes.criacaoDeRobos}>
+              <button>Saiba mais</button>
+            </a>
           </div>
           <div className="brief-image-container">
             <div className="backgroung-img-up-robot"></div>
             {htmlImages.robot}
           </div>
         </div>
-        <div className="brief-container">
+        <div className="brief-container-web">
           <div className="brief-text-container">
             {htmlServicesText.sites}
-            <button tabIndex="7">
-              <a href={routes.criacaoDeSites}>Saiba mais</a>
-            </button>
+            <a href={routes.criacaoDeSites}>
+              <button>Saiba mais</button>
+            </a>
           </div>
           <div className="brief-image-container">
             <div className="backgroung-img-up-web"></div>

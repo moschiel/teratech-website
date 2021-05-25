@@ -14,7 +14,6 @@
 
   .services-container {
     width: 450px;
-    margin-left: 20px;
 
     @include for-max-tablet-landscape {
       display: flex;
@@ -79,6 +78,7 @@
       margin-left: $serviceSquareMargin;
       margin-top: $serviceSquareMargin;
       background-color: $serviceSquareBgColor;
+      margin-left: 40px;
     }
 
     img {
@@ -86,7 +86,7 @@
       width: 100%;
       position: relative;
       z-index: 2;
+      margin-left: 60px;
     }
-    
   }
 }

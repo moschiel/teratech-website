@@ -26,6 +26,7 @@ $formInputsMarginBottomTabletPortrait: 15px;
       width: $widthTextContainer;
       display: flex;
       flex-direction: column;
+      margin-left: 20px;
 
       @include for-max-tablet-landscape {
         width: $widthTabletLandscape;
@@ -39,7 +40,9 @@ $formInputsMarginBottomTabletPortrait: 15px;
       h2 {
         width: 100%;
         font-size: 2.5rem;
-        margin-bottom: 35px;
+        margin-bottom: 40px;
+        padding: 0;
+        line-height: 0;
 
         @include for-max-tablet-portrait {
           text-align: center;
@@ -47,56 +50,46 @@ $formInputsMarginBottomTabletPortrait: 15px;
       }
 
       p {
-        margin: 5px 0px;
         font-size: 1.2rem;
+        padding: 5px 10px 5px 0;
       }
     }
 
     .contact-form-container {
       width: $widthFormContainer;
-
       @include for-max-tablet-landscape {
         width: $widthTabletLandscape;
       }
-      
       form {
         width: 100%;
         display: flex;
-
         @include for-max-tablet-portrait {
           flex-direction: column;
         }
-
         .input-infos {
           margin-right: 10px;
           width: 50%;
-
           @include for-max-tablet-portrait {
             width: 100%;
           }
-          
           input {
             width: 100%;
             padding: $formComponentsPadding;
             border: 2px solid $formInputBorderColor;
             margin-bottom: $formInputsMarginBottom;
-
             @include for-max-tablet-portrait {
               margin-bottom: $formInputsMarginBottomTabletPortrait;
             }
           }
         }
-
         .label-textarea {
           width: 50%;
           margin-bottom: $formInputsMarginBottom;
-
           @include for-max-tablet-portrait {
             width: 100%;
             height: 150px;
             margin-bottom: $formInputsMarginBottomTabletPortrait;
           }
-
           textarea {
             width: 100%;
             height: 100%;
@@ -105,34 +98,28 @@ $formInputsMarginBottomTabletPortrait: 15px;
             border: 2px solid $formInputBorderColor;
           }
         }
-
         textarea,
         input {
           outline: none;
         }
-
         textarea:focus,
         input:focus,
         textarea:hover,
         input:hover {
           border: 2px solid $formInputBorderHoverColor;
         }
-
         //classes de validação do fomulario
         textarea.valid,
         input.valid {
           border: 2px solid $formInputBorderValidColor;
         }
-
         textarea.invalid,
         input.invalid {
           border: 2px solid $formInputBorderInvalidColor;
         }
       }
-
       .button-form {
         width: 100%;
-
         button {
           width: 100%;
           padding: $formComponentsPadding;
@@ -142,13 +129,8 @@ $formInputsMarginBottomTabletPortrait: 15px;
           cursor: pointer;
           border: none;
         }
-
         button:hover {
           background-color: $formButtonHoverColor;
-        }
-
-        button:focus{
-            outline: 2px dashed blueviolet;
         }
       }
     }

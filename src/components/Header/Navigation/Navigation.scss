@@ -1,91 +1,72 @@
 @import "../../Shared/constants";
 
 .navigation {
-  width: fit-content;
-  height: 100%;
-  padding: 0 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    width: fit-content;
+    height: 100%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    nav.desk-menu {
+        //desaparece de 0px ate tablet-portrait
+        @include for-max-tablet-portrait {
+            display: none;
+        } 
+        ul {
+            display: flex;
+            list-style: none;
 
-  nav.desk-menu {
-    //desaparece de 0px ate tablet-portrait
-    @include for-max-tablet-portrait {
-      display: none;
-    }
+            li {
+                margin: auto 18px;
 
-    ul {
-      display: flex;
-      list-style: none;
-
-      li {
-        margin: auto 18px;
-
-        a {
-          padding: 5px;
-          text-decoration: none;
-          font-weight: 600;
-          font-size: 1.2rem;
-          text-transform: capitalize;
-          color: white;
-
-          &:focus {
-            padding: 5px;
-            outline: 2px dashed blueviolet;
-          }
-
-          &:active {
-            outline: 0;
-            border: none;
-          }
+                a {
+                    
+                    text-transform: capitalize;
+                    text-decoration: none;
+                    color: white;
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                }
+                a:hover {
+                    color: $menuHoverColor;
+                }
+            }
         }
-
-        a:hover {
-          color: $menuHoverColor;
+    }
+    nav.mobile-menu {
+        display: none; //alterado via slideToogle() do jquery
+        position: absolute;
+        left: 0px;
+        top: $headerHeight;
+        width: 100%;
+        ul {
+            li {
+                height: 60px;
+                padding: 15px 0;
+                text-align: center;
+                background-color: $menuColor;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    width: 100%;
+                    cursor: pointer;
+                    display: block;
+                    text-transform: capitalize;
+                    font-size: 1.2rem;
+                }
+            }
+            li:hover{
+                background-color: $menuHoverColor;
+            }
         }
-      }
     }
-  }
-
-  nav.mobile-menu {
-    display: none; //alterado via slideToogle() do jquery
-    position: absolute;
-    left: 0px;
-    top: $headerHeight;
-    width: 100%;
-
-    ul {
-      li {
-        height: 60px;
-        padding: 15px 0;
-        text-align: center;
-        background-color: $menuColor;
-
-        a {
-          text-decoration: none;
-          color: white;
-          width: 100%;
-          cursor: pointer;
-          display: block;
-          text-transform: capitalize;
-          font-size: 1.2rem;
+    .menuIcon {
+        //desaparece apartir de tablet-landscape range
+        @include for-min-tablet-landscape {
+            display: none;
+        } 
+        img {
+            cursor: pointer;
         }
-      }
-
-      li:hover {
-        background-color: $menuHoverColor;
-      }
     }
-  }
-
-  .menuIcon {
-    //desaparece apartir de tablet-landscape range
-    @include for-min-tablet-landscape {
-      display: none;
-    }
-
-    img {
-      cursor: pointer;
-    }
-  }
 }
